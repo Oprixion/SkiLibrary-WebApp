@@ -6,6 +6,29 @@
   scroll-behavior: smooth;  
 }
 
+h1 {
+    font-family: Roboto;
+    color: #275D38;
+}
+
+table, th, td {
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 40%;
+}
+
+th {
+    color: white;
+    background-color: black;
+}
+
+.acknowledge {
+    margin-left: 50%;
+}
+
 li {
     display: inline;
     color: #F2CD00;
@@ -117,6 +140,24 @@ li {
 .calculator__container{
     
     padding-top: 10px;
+}
     
+.orientation__container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button_generic {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    color: #F2CD00;
+    background-color: #275D38;
 }
 

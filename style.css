@@ -107,3 +107,16 @@ li {
     text-decoration: none;
     color: #275D38;
 }
+
+.certificate__image{
+    position: relative;
+    left: 10%;
+    margin-top: 200px;
+}
+
+.calculator__container{
+    
+    padding-top: 10px;
+    
+}
+

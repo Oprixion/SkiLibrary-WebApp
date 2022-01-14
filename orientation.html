@@ -45,6 +45,22 @@
         <div class="orientation__container">
           <h1>2021-22 Augustana Campus Winter Recreation & Nordic Ski Library
               Checklist</h1><br><br>
+      
+          <form>
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" id="lastName">
+            </div>
+            <div class="form-group">
+              <label for="idNumber">ID Number</label>
+              <input type="number" class="form-control" id="idNumber" aria-describedby="idHelp">
+              <small id="idHelp" class="form-text text-muted">Typically your CCID</small>
+            </div>
+          </form>
 
           <!-- Bootstrap accordion -->
           <div id="accordion">
@@ -69,29 +85,95 @@
                         <tr>
                             <td>
                               <p><strong>Library guidelines, eligibility & fines for borrowing equipment: …</strong></p>
+                              
                               <p>
-                                Twenty full sets of classic technique Cross Country skis and four sets of snowshoes are available to Augustana Students, Faculty and Staff who have completed a one-time orientation session (this checklist or e-class session) and an annual waiver.
-                                <br>
-Loan period: 72 hours.
-Equipment must be returned to a Library staff member - cannot be left outside the Library or in the
-dropbox.
-Equipment must be clean and dry before returning to library. Microfibre towels available.
-Like most commercial ‘rentals’, you are responsible for returning all rental equipment in clean, dry,
+                                Twenty full sets of classic technique Cross Country skis and four sets of snowshoes are available to Augustana Students, 
+                                Faculty and Staff who have completed a one-time orientation session (this checklist or e-class session) and an annual waiver.
+                              </p>
+                              
+                              <p>
+                                Loan period: 72 hours.
+                              </p>
+                              
+                              <p>
+                                Equipment must be returned to a Library staff member - cannot be left outside the Library or in the dropbox.
+                              </p>
+                              
+                              <p>
+                                Equipment must be clean and dry before returning to library. Microfibre towels available.
+                              </p>
+
+                              <p>
+                                Like most commercial ‘rentals’, you are responsible for returning all rental equipment in clean, dry,
 working condition. If the equipment you return is damaged, needs repair or requires cleaning,
 you’ll be responsible for those costs.
-You will be charged the full retail value for lost, stolen or destroyed equipment.
+                              </p>
+
+                              <p>
+                                You will be charged the full retail value for lost, stolen or destroyed equipment.
                               </p>
                             </td>
+
                             <td><div class="acknowledge"><input type="checkbox"></div></td>
                         </tr>
                         
                         <tr>
-                            <td><p>How do I learn how to ski? …</p></td>
+                            <td><p><strong>How do I learn how to ski?</strong></p>
+                              <p>
+                                There is an active, free, programming component supported by Campus Recreation and the
+Vikings Nordic Club Team, including Learn-to-Ski sessions and Social Ski Meet-ups. Sessions are
+open to all Students, Faculty & Staff (even if using non-Library equipment) who have completed a
+waiver.
+                              </p>
+
+                              <p>
+                                All lessons begin from the Founders’ Hall steps. See schedule posted at Library, A-frame or on
+the UAlberta App under Campus Recreation.
+                              </p>
+
+                              <p>
+                                Group lessons available: Request a lesson time for 4 or more people by emailing
+augrec@ualberta.ca.
+                              </p>                            
+                            </td>
+
                             <td><div class="acknowledge"><input type="checkbox"></div></td>
                         </tr>
         
                         <tr>
-                            <td><p>Where do I ski or snowshoe? …</p></td>
+                            <td><p><strong>Where do I ski or snowshoe?</strong></p>
+                              <p>
+                                Orient yourself to the trails & Camrose geography by visiting camroseskiclub.com
+                              </p>
+
+                              <p>
+                                <strong>Skis</strong>  AND <strong>snowshoes</strong> should only contact soft surfaces (snow) only. No pavement or gravel.
+                              </p>
+
+                              <p>
+                                Do not snowshoe on the groomed ski trails; do not ski on rough ‘off track’ conditions.
+                              </p>
+
+                              <p>
+                                Obey signs
+                              </p>
+
+                              <p>
+                                Reminders for Trail etiquette: be aware of one way trails, watch around blind corners.
+                              </p>
+
+                              <p>
+                                Go with a buddy!
+                              </p>
+
+                              <p>
+                                Dogs are allowed on the Golf Course Trails only
+                              </p>
+
+                              <p>
+                                Call 911 for Emergencies
+                              </p>
+                            </td>
                             <td><div class="acknowledge"><input type="checkbox"></div></td>
                         </tr>
                     </tbody>
@@ -109,28 +191,125 @@ You will be charged the full retail value for lost, stolen or destroyed equipmen
               </div>
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                 <div class="card-body">
-                  <table>
+                  <table style="align-self: left;">
                     <thead>
                         <tr>
-                            <th>Read</th>
-                            <th>Acknowledge</th>
+                          <th id="row-header"></th>
+                          <th>Read</th>
+                          <th>Acknowledge</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="cell-left"><p>Library guidelines, eligibility & fines for borrowing equipment: …</p></td>
+                          <td id="row-header">BOOTS</td>
+                          <td class="cell-left">
+                            <p>
+                              Sizing is personal preference - take warm socks into consideration.
+                            </p>
+
+                            <p>
+                              European Sizes are truest.
+                            </p>
+                            
+                            <p>
+                              Boots should fit with some room to wiggle your toes. Tight boots = cold feet!
+                            </p>
+
+                            <p>
+                              Boots are only to be worn on snow and soft surfaces. No pavement or gravel!
+                            </p>
+                          </td>
+                          <td><div class="acknowledge"><input type="checkbox"></div></td>
+                        </tr>
+                      
+        
+                        <tr>
+                          <td id="row-header">SKIS</td>
+                            <td>
+                              <p>Choose by the weight range recommendation that is indicated in yellow on all of the
+                              skis.
+                              </p>
+
+                              <p>
+                                Skis should be the appropriate weight range for your weight.
+                              </p>
+
+                              <p>
+                                Skis should only contact snow. No ice, gravel, tree roots etc.
+                              </p>
+
+                              <p>
+                                Be mindful of storing skis and poles… pole tips scratch bases!
+                              </p>
+                            </td>
+
                             <td><div class="acknowledge"><input type="checkbox"></div></td>
                         </tr>
                         
                         <tr>
-                            <td><p>How do I learn how to ski? …</p></td>
+                          <td id="row-header">POLES</td>
+                            <td>
+                              <p>
+                                Choose a pole length that falls between your armpit and the top of your shoulder.
+                              </p>
+
+                              <p>
+                                Straps are tightened to fit snugly around the hand. (see diagram)
+                                <br>INSERT DIAGRAM HERE<br>
+
+                                1a: Hand comes up through the bottom of the strap loop.<br>
+                                2a: Hand grips pole handle overtop of the pole strap.<br>
+                                3a: Strap is tight enough to release the pole at the back of your arm swing without losing the pole.
+                              </p>
+
+                              <p>
+                                To change the length of your pole strap:<br>
+                                1. Pull up on the grey end piece.<br>
+                                2. Pull upwards on the ends of the pole strap until the loop fits
+                                snugly around your hand.<br>
+                                3. Push the grey end piece back down.
+                              </p>
+
+                              <p>
+
+                              </p>
+                            </td>
                             <td><div class="acknowledge"><input type="checkbox"></div></td>
                         </tr>
-        
+
                         <tr>
-                            <td><p>Where do I ski or snowshoe? …</p></td>
+                          <td id="row-header">BINDINGS</td>
+                            <td>
+                              <p>
+                                How to operate bindings:<br>
+                                1. Open the binding by pulling the black piece up<br>
+                                2. Place the bar at the very front of the boot into the
+                                slit that opening the binding has created.<br>
+                                3. Close the binding by pushing the black piece back down.<br>
+                              </p>
+
+                              <p>
+                                Keep bindings closed when skis are not in use.
+                              </p>
+                            </td>
+
                             <td><div class="acknowledge"><input type="checkbox"></div></td>
                         </tr>
+
+                        <tr>
+                          <td id="row-header">Who to ask<br>for help</td>
+                            <td>
+                              <p>
+                                Circulation Only: Checking Skis in & out? <strong>Library Staff</strong> 
+                              </p>
+
+                              <p>
+                                Questions about Gear, Instruction, Social Ski Opportunities &/or Recreation on Campus? <strong>augrec@ualberta.ca</strong>
+                              </p>
+                            </td>
+                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                        </tr>
+
                     </tbody>
                 </table>
                 </div>

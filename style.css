@@ -14,12 +14,17 @@ h1 {
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
-    width: 40%;
+    width: 100%;
 }
 
 th {
     color: white;
     background-color: black;
+}
+
+#row-header {
+
+    width: 10%;
 }
 
 .acknowledge {

@@ -28,7 +28,7 @@
   .acknowledge {
       margin-left: 50%;
   }
-  
+/*-------------------------------Home Page--------------------------------------------------------------*/
   li {
       display: inline;
       color: #F2CD00;
@@ -69,7 +69,7 @@
   .home__page {
       margin-right: auto;
       margin-top: 1%;
-      font-size: 30px;
+      font-size: 28px;
       font-weight: 200;
       color: #F2CD00;
       text-decoration: none;
@@ -158,8 +158,6 @@
       }
   }
   
-  
-  
   .text__container{
       position: relative;
       width: 40%;
@@ -180,12 +178,8 @@
       color: #275D38;
       text-align: center;
   }
+  /*------------------------------------End of Home Page----------------------------------------------*/
   
-  .certificate__image{
-      position: relative;
-      left: 10%;
-      margin-top: 200px;
-  }
   
   .calculator__container{
       
@@ -210,3 +204,31 @@
       color: #F2CD00;
       background-color: #275D38;
   }
+/*-----------------------------------Certification Page-----------------------------------------------------------------*/
+.certificate__elements{
+    width: 100%; 
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    border-width:2px;
+    border-style:solid;
+    border-color:black;
+}
+.name,.studentID{
+    color: #275D38;
+    font-size: 18px;
+}
+.info__container{
+    margin-left: 20%;
+}
+@media screen and (max-width:800px){
+    .info__container{
+        margin-left: 0%;
+    }
+}
+.certificate__image{
+    width: 60%;
+    margin-left: 20%;
+}
+/*-----------------------------------End of Certification Page----------------------------------------------------------*/

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ski Library</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <!--Navbar Section-->
@@ -33,46 +34,126 @@
         <div class="right__container"></div>
       </div>
 
-      
+      <div class="side__elements">
+        <!--Image setup-->
+        <img src="images/right.jpg" class="right__image">
+        <img src="images/left.jpg" class="left__image">
+      </div>
 
-      <div class="orientation__container">
-        <h1>2021-22 Augustana Campus Winter Recreation & Nordic Ski Library
-            Checklist</h1><br><br>
-            
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Read</th>
-                    <th>Acknowledge</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><p>Library guidelines, eligibility & fines for borrowing equipment: …</p></td>
-                    <td><div class="acknowledge"><input type="checkbox"></div></td>
-                </tr>
-                
-                <tr>
-                    <td><p>How do I learn how to ski? …</p></td>
-                    <td><div class="acknowledge"><input type="checkbox"></div></td>
-                </tr>
-
-                <tr>
-                    <td><p>Where do I ski or snowshoe? …</p></td>
-                    <td><div class="acknowledge"><input type="checkbox"></div></td>
-                </tr>
-            </tbody>
-        </table><br><br>
-
-        <div>
-          <input type="checkbox"> I acknowledge that I have read understood the contents of this orientation
-          <br><br>
-          <button class="button_generic">Continue</button>
+      <div class="middle__elements">
         
-        </div>
-    </div>
+        <div class="orientation__container">
+          <h1>2021-22 Augustana Campus Winter Recreation & Nordic Ski Library
+              Checklist</h1><br><br>
 
-      
+          <!-- Bootstrap accordion -->
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    General Guidelines
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  <table>
+                    <thead>
+                        <tr>
+                            <th>Read</th>
+                            <th>Acknowledge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                              <p><strong>Library guidelines, eligibility & fines for borrowing equipment: …</strong></p>
+                              <p>
+                                Twenty full sets of classic technique Cross Country skis and four sets of snowshoes are available to Augustana Students, Faculty and Staff who have completed a one-time orientation session (this checklist or e-class session) and an annual waiver.
+                                <br>
+Loan period: 72 hours.
+Equipment must be returned to a Library staff member - cannot be left outside the Library or in the
+dropbox.
+Equipment must be clean and dry before returning to library. Microfibre towels available.
+Like most commercial ‘rentals’, you are responsible for returning all rental equipment in clean, dry,
+working condition. If the equipment you return is damaged, needs repair or requires cleaning,
+you’ll be responsible for those costs.
+You will be charged the full retail value for lost, stolen or destroyed equipment.
+                              </p>
+                            </td>
+                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><p>How do I learn how to ski? …</p></td>
+                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                        </tr>
+        
+                        <tr>
+                            <td><p>Where do I ski or snowshoe? …</p></td>
+                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Equipment sizing, use and care
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  <table>
+                    <thead>
+                        <tr>
+                            <th>Read</th>
+                            <th>Acknowledge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="cell-left"><p>Library guidelines, eligibility & fines for borrowing equipment: …</p></td>
+                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><p>How do I learn how to ski? …</p></td>
+                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                        </tr>
+        
+                        <tr>
+                            <td><p>Where do I ski or snowshoe? …</p></td>
+                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of accordion -->
+              
+  
+          <br><br>
+  
+          <div>
+            <input type="checkbox"> I acknowledge that I have read understood the contents of this orientation
+            <br><br>
+            <button class="button_generic">Continue</button>
+          
+          </div>
+        </div>
+      </div>
+
+      <!-- Bootstrap inclusions -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -12,9 +12,6 @@ h1 {
 }
 
 table, th, td {
-    margin-top: 10%;
-    margin-left: auto;
-    margin-right: auto;
     border: 1px solid black;
     border-collapse: collapse;
     width: 40%;
@@ -167,10 +164,7 @@ li {
     padding-top: 10px;
 }
     
-.orientation__container {
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .button_generic {
     border: none;

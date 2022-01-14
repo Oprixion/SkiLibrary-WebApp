@@ -44,9 +44,6 @@ li {
 .navbar__links:link,.navbar__links:visited{
     color: #F2CD00;
 }
-.home__page {
-    text-decoration: none;
-}
 
 .navbar {
     background: #275D38;
@@ -67,16 +64,15 @@ li {
     width: 100%;
     max-width: 1900px;
     margin: auto;
-    padding: 0 50px;
 }
 
 .home__page {
     margin-right: auto;
-    margin-top: 13px;
+    margin-top: 1%;
     font-size: 30px;
     font-weight: 200;
     color: #F2CD00;
-    
+    text-decoration: none;
 }
 
 .navbar__links{
@@ -86,49 +82,78 @@ li {
 
 #navbar__logo {
     display: flex;
+    margin-left: 0%;
 }
 
-
-.right__container {
+.right__image{
     float: right;
-    width: 15pc;
-    height: 55pc;
-    background: url('images/right.jpg') no-repeat;
-    background-size: cover;
+    width: 20%;
+}
+
+.left__image{
+    float: left;
+    width: 20%;
+}
+
+@media screen and (max-width:800px) {
+    .left__image, .right__image{
+        width: 0%;
+    }
     
 }
 
-.left__container {
-    float: left;
-    width: 15pc;
-    height: 55pc;
-    background: url('images/left.jpg') no-repeat;
-    background-size: cover;
+.middle__elements{
+    width: 60%; 
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    
+    
 }
 
-.button__container{
-    position: relative;
-    left: 35%;
-    margin-top: 550px;
-    width: 400px;
-    height: 100px;
-    background: url('images/BeginButton.PNG');
-    background-size: cover;
+.home__logo{
+    margin-top: 10%;
+    margin-left: 35%;
+    height: 30%;
+    width: 30%;
 }
+
+.begin__button{
+    position: relative;
+    border-radius: 5px;
+    width: 40%;
+    height: 20%;
+    text-align: center;
+    font-size: 120%;
+    padding: 2%;
+    background-color: #275D38;
+    text-decoration: none;
+    color: #F2CD00;
+    margin-left: 30%;
+    margin-top: 10%;
+    
+}
+
+@media screen and (max-width:800px) {
+    .begin__button, .home__logo{
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
 
 .text__container{
     position: relative;
-    white-space: nowrap;
-    right: 22%;
-    width: 300px;
+    width: 40%;
     height: 50px;
-    margin-left: 790px;
-    
+    margin-left: 30%;
+    text-align: center;
 }
-
 .view__certificate{
     text-decoration: none;
     color: #275D38;
+    text-align: center;
 }
 
 .certificate__image{
@@ -138,27 +163,13 @@ li {
 }
 
 .calculator__container{
-    padding-top: 2pc;
-    margin-left: 15pc;
-}
-
-.fit__title{
-    color: #275D38;
-    font-size: 2pc;
-}
-
-.instruction__container{
-    margin-left: 15pc;
+    
+    padding-top: 10px;
 }
     
 .orientation__container {
     margin-left: auto;
     margin-right: auto;
-}
-
-.backButton__container{
-    margin-left: 15pc;
-
 }
 
 .button_generic {

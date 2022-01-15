@@ -7,14 +7,7 @@
   }
 
 /*-------------------------------Home Page--------------------------------------------------------------*/
-  li {
-      display: inline;
-      color: #F2CD00;
-      font-size:large;
-      font-weight: 450;
-      margin: 10px;
-      margin-bottom: 0px;
-  }
+
   
   .navbar__links {
       text-decoration: none;
@@ -175,14 +168,7 @@ th {
     margin-left: 50%;
 }
 
-li {
-    display: inline;
-    color: #F2CD00;
-    font-size:large;
-    font-weight: 450;
-    margin: 10px;
-    margin-bottom: 0px;
-}
+
 
 .navbar__links {
     text-decoration: none;

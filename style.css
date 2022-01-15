@@ -341,3 +341,9 @@ li {
     color: red;
 }
 /* End of Waiver page */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

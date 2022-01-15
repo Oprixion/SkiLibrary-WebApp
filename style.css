@@ -1,4 +1,148 @@
 * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;  
+  }
+
+/*-------------------------------Home Page--------------------------------------------------------------*/
+  li {
+      display: inline;
+      color: #F2CD00;
+      font-size:large;
+      font-weight: 450;
+      margin: 10px;
+      margin-bottom: 0px;
+  }
+  
+  .navbar__links {
+      text-decoration: none;
+  }
+  .navbar__links:link,.navbar__links:visited{
+      color: #F2CD00;
+  }
+  
+  .navbar {
+      background: #275D38;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+  }
+  
+  .navbar__container {
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      z-index: 1;
+      width: 100%;
+      max-width: 1900px;
+      margin: auto;
+  }
+  
+  .home__page {
+      margin-right: auto;
+      margin-top: 1%;
+      font-size: 28px;
+      font-weight: 200;
+      color: #F2CD00;
+      text-decoration: none;
+  }
+  
+  .navbar__links{
+      font-weight: 200;
+      margin-top: 13px;
+  }
+  
+  #navbar__logo {
+      display: flex;
+      margin-left: 0%;
+  }
+  
+  .right__image{
+      float: right;
+      width: 20%;
+  }
+  
+  .left__image{
+      float: left;
+      width: 20%;
+  }
+  
+  @media screen and (max-width:800px) {
+      .left__image, .right__image{
+          width: 0%;
+      }
+      
+  }
+  
+  .middle__elements{
+      width: 60%; 
+      height: auto;
+      margin: 0 auto;
+      padding: 10px;
+      position: relative;
+      
+      
+  }
+  
+  .home__logo{
+      margin-top: 10%;
+      margin-left: 30%;
+      height: 40%;
+      width: 40%;
+  }
+  
+  .begin__button{
+      position: relative;
+      border-radius: 5px;
+      width: 40%;
+      height: 20%;
+      text-align: center;
+      font-size: 120%;
+      padding: 2%;
+      background-color: #275D38;
+      text-decoration: none;
+      color: #F2CD00;
+      margin-left: 30%;
+      margin-top: 10%;
+  }
+
+  .calculate__button{
+      position: relative;
+      width: 30%;
+      height: 15%;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 1%;
+      background-color: #F2CD00;
+      text-decoration: none;
+      color: #275D38;
+      margin-left: 35%;
+  }
+  
+  @media screen and (max-width:800px) {
+      .begin__button, .home__logo,.calculate__button{
+          width: 70%;
+          margin-left: 15%;
+      }
+      .text__container{
+          margin-left: 10%;
+      }
+  }
+  
+  .text__container{
+      position: relative;
+      width: 40%;
+      height: 50px;
+      margin-left: 30%;
+      text-align: center;
+      white-space: nowrap;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -12,17 +156,19 @@ h1 {
 }
 
 table, th, td {
-    margin-top: 10%;
-    margin-left: auto;
-    margin-right: auto;
     border: 1px solid black;
     border-collapse: collapse;
-    width: 40%;
+    width: 100%;
 }
 
 th {
     color: white;
     background-color: black;
+}
+
+#row-header {
+
+    width: 10%;
 }
 
 .acknowledge {
@@ -99,79 +245,78 @@ li {
     .left__image, .right__image{
         width: 0%;
     }
-    
+    @media screen and (max-width:800px) {
+        .text__container{
+            margin-left: 10%;
+        }
+    }
 }
 
-.middle__elements{
-    width: 60%; 
+  .view__certificate{
+      text-decoration: none;
+      color: #275D38;
+      text-align: center;
+  }
+  /*------------------------------------End of Home Page----------------------------------------------*/
+  
+  
+  .calculator__container{
+      
+      padding-top: 10px;
+  }
+      
+  .orientation__container {
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .button_generic {
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      color: #F2CD00;
+      background-color: #275D38;
+  }
+/*-----------------------------------Certification Page-----------------------------------------------------------------*/
+.certificate__elements{
+    width: 100%; 
     height: auto;
     margin: 0 auto;
     padding: 10px;
     position: relative;
-    
-    
+    border-width:2px;
+    border-style:solid;
+    border-color:black;
 }
-
-.home__logo{
-    margin-top: 10%;
-    margin-left: 35%;
-    height: 30%;
-    width: 30%;
+.name,.studentID{
+    color: #275D38;
+    font-size: 18px;
 }
-
-.begin__button{
-    position: relative;
-    border-radius: 5px;
-    width: 40%;
-    height: 20%;
-    text-align: center;
-    font-size: 120%;
-    padding: 2%;
-    background-color: #275D38;
-    text-decoration: none;
-    color: #F2CD00;
-    margin-left: 30%;
-    margin-top: 10%;
-    
+.info__container{
+    margin-left: 20%;
 }
-
-@media screen and (max-width:800px) {
-    .begin__button, .home__logo{
-        width: 70%;
-        margin-left: 15%;
+@media screen and (max-width:800px){
+    .info__container{
+        margin-left: 0%;
     }
 }
-
-
-.text__container{
-    position: relative;
-    width: 40%;
-    height: 50px;
-    margin-left: 30%;
-    text-align: center;
-}
-.view__certificate{
-    text-decoration: none;
-    color: #275D38;
-    text-align: center;
-}
-
 .certificate__image{
-    position: relative;
-    left: 10%;
-    margin-top: 200px;
+    width: 60%;
+    margin-left: 20%;
 }
+/*-----------------------------------End of Certification Page----------------------------------------------------------*/
 
 .calculator__container{
     
     padding-top: 10px;
 }
     
-.orientation__container {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .button_generic {
     border: none;
     color: white;
@@ -186,3 +331,13 @@ li {
     background-color: #275D38;
 }
 
+/* Start of Waiver page */
+
+.liability_header .liability_subheader {
+    text-align: center;
+}
+
+.liability_subheader {
+    color: red;
+}
+/* End of Waiver page */

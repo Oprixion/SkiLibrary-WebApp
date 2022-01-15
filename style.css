@@ -331,3 +331,13 @@ li {
     background-color: #275D38;
 }
 
+/* Start of Waiver page */
+
+.liability_header .liability_subheader {
+    text-align: center;
+}
+
+.liability_subheader {
+    color: red;
+}
+/* End of Waiver page */

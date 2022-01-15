@@ -5,176 +5,7 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     scroll-behavior: smooth;  
   }
-
-/*-------------------------------Home Page--------------------------------------------------------------*/
-  li {
-      display: inline;
-      color: #F2CD00;
-      font-size:large;
-      font-weight: 450;
-      margin: 10px;
-      margin-bottom: 0px;
-  }
-  
-  .navbar__links {
-      text-decoration: none;
-  }
-  .navbar__links:link,.navbar__links:visited{
-      color: #F2CD00;
-  }
-  
-  .navbar {
-      background: #275D38;
-      height: 80px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-  }
-  
-  .navbar__container {
-      display: flex;
-      justify-content: space-between;
-      height: 80px;
-      z-index: 1;
-      width: 100%;
-      max-width: 1900px;
-      margin: auto;
-  }
-  
-  .home__page {
-      margin-right: auto;
-      margin-top: 1%;
-      font-size: 28px;
-      font-weight: 200;
-      color: #F2CD00;
-      text-decoration: none;
-  }
-  
-  .navbar__links{
-      font-weight: 200;
-      margin-top: 13px;
-  }
-  
-  #navbar__logo {
-      display: flex;
-      margin-left: 0%;
-  }
-  
-  .right__image{
-      float: right;
-      width: 20%;
-  }
-  
-  .left__image{
-      float: left;
-      width: 20%;
-  }
-  
-  @media screen and (max-width:800px) {
-      .left__image, .right__image{
-          width: 0%;
-      }
-      
-  }
-  
-  .middle__elements{
-      width: 60%; 
-      height: auto;
-      margin: 0 auto;
-      padding: 10px;
-      position: relative;
-      
-      
-  }
-  
-  .home__logo{
-      margin-top: 10%;
-      margin-left: 30%;
-      height: 40%;
-      width: 40%;
-  }
-  
-  .begin__button{
-      position: relative;
-      border-radius: 5px;
-      width: 40%;
-      height: 20%;
-      text-align: center;
-      font-size: 120%;
-      padding: 2%;
-      background-color: #275D38;
-      text-decoration: none;
-      color: #F2CD00;
-      margin-left: 30%;
-      margin-top: 10%;
-  }
-
-  .calculate__button{
-      position: relative;
-      width: 30%;
-      height: 15%;
-      text-align: center;
-      font-size: 18px;
-      font-weight: 400;
-      padding: 1%;
-      background-color: #F2CD00;
-      text-decoration: none;
-      color: #275D38;
-      margin-left: 35%;
-  }
-  
-  @media screen and (max-width:800px) {
-      .begin__button, .home__logo,.calculate__button{
-          width: 70%;
-          margin-left: 15%;
-      }
-      .text__container{
-          margin-left: 10%;
-      }
-  }
-  
-  .text__container{
-      position: relative;
-      width: 40%;
-      height: 50px;
-      margin-left: 30%;
-      text-align: center;
-      white-space: nowrap;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  scroll-behavior: smooth;  
-}
-
-h1 {
-    font-family: Roboto;
-    color: #275D38;
-}
-
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th {
-    color: white;
-    background-color: black;
-}
-
-#row-header {
-
-    width: 10%;
-}
-
-.acknowledge {
-    margin-left: 50%;
-}
-
+/*----------------------------------Common Atribute------------------------------------------------------*/
 li {
     display: inline;
     color: #F2CD00;
@@ -212,10 +43,10 @@ li {
     margin: auto;
 }
 
-.home__page {
+.main__title {
     margin-right: auto;
     margin-top: 1%;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 200;
     color: #F2CD00;
     text-decoration: none;
@@ -228,7 +59,6 @@ li {
 
 #navbar__logo {
     display: flex;
-    margin-left: 0%;
 }
 
 .right__image{
@@ -244,20 +74,119 @@ li {
 @media screen and (max-width:800px) {
     .left__image, .right__image{
         width: 0%;
-    }
-    @media screen and (max-width:800px) {
-        .text__container{
-            margin-left: 10%;
-        }
-    }
+    }  
 }
 
-  .view__certificate{
-      text-decoration: none;
-      color: #275D38;
-      text-align: center;
-  }
-  /*------------------------------------End of Home Page----------------------------------------------*/
+.middle__elements{
+    width: 60%; 
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative; 
+}
+@media screen and (max-width:800px) {
+  .middle__elements{
+      width: 100%;
+  }  
+}
+
+
+/*----------------------------------End of Common Atribute------------------------------------------------------*/
+/*-------------------------------Home Page--------------------------------------------------------------*/
+.home__logo{
+    margin-top: 10%;
+    margin-left: 30%;
+    height: 40%;
+    width: 40%;
+}
+
+.begin__button{
+    position: relative;
+    border-radius: 5px;
+    width: 40%;
+    height: 20%;
+    text-align: center;
+    font-size: 120%;
+    padding: 2%;
+    background-color: #275D38;
+    text-decoration: none;
+    color: #F2CD00;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.calculator__button{
+    position: relative;
+    width: 30%;
+    height: 15%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 1%;
+    background-color: #F2CD00;
+    text-decoration: none;
+    color: #275D38;
+    margin-left: 35%;
+}
+  
+.text__container{
+    position: relative;
+    width: 40%;
+    height: 50px;
+    margin-left: 30%;
+    text-align: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.click_here{
+    text-decoration: none;
+    color: #275D38;
+}
+
+@media screen and (max-width:800px) {
+    .begin__button, .home__logo,.calculator__button{
+        width: 70%;
+        margin-left: 15%;
+    }
+    .text__container{
+        width: 50%;
+        margin-left: 25%;
+    }
+      
+}
+/*------------------------------------End of Home Page----------------------------------------------*/
+/*------------------------------------------------------------Orientation Page--------------------------------------------------------*/
+h1 {
+    font-family: Roboto;
+    color: #275D38;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    color: white;
+    background-color: black;
+}
+
+#row-header {
+
+    width: 10%;
+}
+
+.acknowledge {
+    margin-left: 50%;
+}
+/*------------------------------------------------------------End of Orientation Page--------------------------------------------------------*/
+
+
+ 
   
   
   .calculator__container{
@@ -270,22 +199,9 @@ li {
       margin-right: auto;
   }
   
-  .button_generic {
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      color: #F2CD00;
-      background-color: #275D38;
-  }
 /*-----------------------------------Certification Page-----------------------------------------------------------------*/
 .certificate__elements{
-    width: 100%; 
+    width: 60%; 
     height: auto;
     margin: 0 auto;
     padding: 10px;
@@ -298,17 +214,23 @@ li {
     color: #275D38;
     font-size: 18px;
 }
-.info__container{
-    margin-left: 20%;
+
+.instruction__container{
+    width: 70%;
+    margin-left: 15%;
 }
-@media screen and (max-width:800px){
-    .info__container{
-        margin-left: 0%;
-    }
-}
+
 .certificate__image{
-    width: 60%;
-    margin-left: 20%;
+    width: 100%;
+    margin-left: 0%;
+}
+.back__button{
+    width: 30%;
+    height: 15%;
+    background-color: #F2CD00;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 15%;
 }
 /*-----------------------------------End of Certification Page----------------------------------------------------------*/
 

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ski Library</title>
     <link rel="stylesheet" href="style.css">
-</head>
 <body>
     <!--Navbar Section-->
    <div class="navbar">
@@ -39,18 +38,17 @@
         
         
         <!--Begin Button setup-->
-        <a class="begin__button" href="orientation.html">Begin Orientaion</a>
+        <button class="begin__button" onclick="beginButtonClicked()">Begin Orientaion</button>
           
         <!--View certificate-->
         <div class="text__container">Completed the orientation? <br>
-          <a href="#certificate" class="click_here">Click here</a>
+          <a href="certificationPage.html" class="click_here">Click here</a>
         </div>
         <!--fit calculator button-->
-        <button class="calculator__button">
+        <button class="calculator__button" onclick="calculatorButtonClicked()">
           Find Your Fit
         </button>
       </div>
-
-      
+      <script src='app.js'></script> 
 </body>
 </html>

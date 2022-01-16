@@ -85,6 +85,7 @@ li {
     margin: 0 auto;
     padding: 10px;
     position: relative; 
+    
 }
 @media screen and (max-width:800px) {
   .middle__elements{
@@ -271,3 +272,7 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+
+/*------------------Quiz Page---------------------*/
+
+/*-----------------End of Quiz Page---------------*/

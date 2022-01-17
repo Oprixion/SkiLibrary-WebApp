@@ -1,55 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ski Library</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!--Navbar Section-->
-   <div class="navbar">
-    <div class="navbar__container">
-        <a href="#" id="navbar__logo"><img src="images/logo.PNG" alt="logo"></a>
+
+    <!--Custom styles to merged or changed later-->
+    <style>
+      .output__box {
+        border: 2px solid black;
+        padding: 10px;
+        width: 120px;
+      }
+      .backbutton__container {
+        padding-left: 20px;
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+
+
+  <body>
+
+    <!---------------------------------------Navbar Section------------------------------------->
+    <div class="navbar">
+      <div class="navbar__container">
+        <a href="#" id="navbar__logo"><img src="images/ualbertasmalllogo.png" alt="logo"></a>
         <a href="#home" class="main__title"> Augustana Ski Library</a>
         <ul class="navbar__menu">
             <!--Navbar items-->
           <li class="navbar__item">
-            <a href="#howtouse" class="navbar__links" id="howtouse-page">About</a>
+            <a href="#about" class="navbar__links" id="howtouse-page">About</a>
           </li>
           <li class="navbar__item">
-            <a href="#about" class="navbar__links" id="about-page">How to use</a>
+            <a href="#howtouse" class="navbar__links" id="about-page">How to use</a>
           </li>
         </ul>
       </div>
    </div>
 
-   <!--Page Section-->
-      <div class="startPage">
-        <!--Image setup-->
-        <div class="left__container"></div>
-
-        <div class="right__container"></div>
+   <!---------------------------------------Calculator Section------------------------------------->
+      <!--Back Button-->
+      <div class="backbutton__container">
+        <img src="images/backButton.png" class="backButton"></img>
       </div>
-
-   <!--Calculator Section-->
-   <div class="calculator__container">
-       <!--Back Button-->
-       <div class="backButton__container">
-           <img src="images/backButton.png" class="backButton"></img>
-       </div>
-       <!--Explaination-->
-       <div class="instruction__container">
-           <span class="fit__title"><b>Find Your Fit</b><br></span>
-           Below you can enter your weight in kilograms to automatically determine the right ski size for you.
-       </div>
-       <!--Fit calculator-->
-       <div class="calculator__container">
-           <img src="images/calculator.png" class="calculator"></img>
-       </div>
-
-   </div>
       
-</body>
+      <!--PAGE CONTENTS-->
+      <div class="instruction__container">
+        <!--MAIN FIND YOUR FIT DESCRIPTION-->
+        <span class="fit__title"><b>Find Your Fit</b><br></span>
+        Before you ski you must first find properly sized equipment in the library. This page is here to help with any sizing questions you may need answered or calculated. The below video covers much of what is displayed here.
+        <br>
+        <!--Youtube video embed-->
+        <iframe src="https://www.youtube.com/embed/YfsfQZpftXY" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br><br>
+        <!--SKI POLE SIZING SECTION-->
+        <span class="fit__title"><b>Ski Pole sizing</b><br></span>
+        When looking for a correctly sized ski pole it is recommended for the pole's height to meet below or near the armpit. When securing your hand within the strap, take your hand and insert it through the strap loop from below. Then grip the pole. The ski pole may have a strap tightening feature which might be located on the top of the pole. Pull the straps on top until comfortable with the back of your hand. (Shown in video)
+        <br><br>
+        <!--SKI BOOT SIZING SECTION-->
+        <span class="fit__title"><b>Ski boot sizing</b><br></span>
+        To find the correct ski boot size you can take your worn shoe size and find the european (uk) measurement. When trying on the boots there should ideally be some space for your foot to move. If the boots are too tight your feet might get cold.
+        <br><br>
+        <!--SKI SIZING SECTION-->
+        <span class="fit__title"><b>Ski sizing</b><br></span>
+        Below is a calculator that takes your inputed weight and displays the proper ski size for you. Reminder to never walk with your skis on hard surfaces such as concrete.
+        
+        
+        <!---------------------------------------FIT CALCULATOR FORM------------------------------------->
+        <form oninput="
+        //Variable Initalization
+        var dropdown = document.getElementById('weightSelector');
+        var poundMultiplier = 1;
+
+        //Multiply kg by this multiplier when 'lb' is selected
+        if(dropdown.value === 'lb') {
+          poundMultiplier = 2.205;
+        }
+        
+        //Ski size calculator
+        if(weight.value >= 82.5 * poundMultiplier) {
+          result.value = 206;
+        }
+        else if(weight.value >= 72.5 * poundMultiplier) {
+          result.value = 198;
+        }
+        else if(weight.value >= 62.5 * poundMultiplier) {
+          result.value = 190;
+        }
+        else if(weight.value >= 52.5 * poundMultiplier) {
+          result.value = 179;
+        }
+        else {
+          result.value = 174;
+        }
+        ">
+          <input type="number" id="weight" placeholder="weight" min=0>
+          <select id="weightSelector">
+            <option value="kg">kg</option>
+            <option value="lb">lb</option>
+          </select>
+          <br><br>
+          <div class="output__box">
+            Ski Size: 
+            <b>
+            <output name="result"></output>
+            </b>
+          </div>
+        </form>
+
+      </div><!--END OF PAGE CONTENTS-->
+  </body>
 </html>

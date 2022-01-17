@@ -11,7 +11,6 @@ function calculatorButtonClicked(){
 function toWaiverPage(){
     document.location.href="waiver.html"
 }
-
 function validateAnswer(){
     var correctAnswers = [1, 3, 2, 3, 4]
     var numberOfCorrectAnswers = 0;

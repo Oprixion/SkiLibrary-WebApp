@@ -7,7 +7,7 @@
   }
 
 /*----------------------------------Common Atribute------------------------------------------------------*/
-li {
+.navbar__item {
     display: inline;
     color: #F2CD00;
     font-size:large;

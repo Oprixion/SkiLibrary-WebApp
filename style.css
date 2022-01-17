@@ -228,12 +228,18 @@ th {
     margin-left: 0%;
 }
 .back__button{
-    width: 30%;
-    height: 15%;
     background-color: #F2CD00;
+    border: none;
+
+    width: 150px;
+    height: 30px;
+    margin-left: 1%;
+    margin-top: 1%;
+
     font-size: 18px;
     font-weight: 400;
-    margin-left: 15%;
+    text-align:left;
+    text-indent: 20px;
 }
 /*-----------------------------------End of Certification Page----------------------------------------------------------*/
 

@@ -10,22 +10,14 @@
 
     <!--Custom styles to merged or changed later-->
     <style>
-      .calculator__container {
-        float: left;
-        margin-left: 20px;
-      }
-      .backButton__container {
-        float:left;
-        margin-right: 20px;
-        margin-bottom: 100%;
-      }
-      .navbar__menu {
-        margin-top: 50px;
-      }
       .output__box {
         border: 2px solid black;
         padding: 10px;
         width: 120px;
+      }
+      .backbutton__container {
+        padding-left: 20px;
+        padding-top: 20px;
       }
     </style>
   </head>
@@ -33,13 +25,11 @@
 
   <body>
 
-    <!--Navbar Section-->
+    <!---------------------------------------Navbar Section------------------------------------->
     <div class="navbar">
       <div class="navbar__container">
-        <a href="#" id="navbar__logo">
-          <img src="images/ualbertasmalllogo.png" alt="logo">
-        </a>
-        <a href="#home" class="home__page"> Augustana Ski Library</a>
+        <a href="#" id="navbar__logo"><img src="images/ualbertasmalllogo.png" alt="logo"></a>
+        <a href="#home" class="main__title"> Augustana Ski Library</a>
         <ul class="navbar__menu">
             <!--Navbar items-->
           <li class="navbar__item">
@@ -52,15 +42,13 @@
       </div>
    </div>
 
-   <!--Calculator Section-->
-    <div class="calculator__container">
-      
+   <!---------------------------------------Calculator Section------------------------------------->
       <!--Back Button-->
-      <div class="backButton__container">
+      <div class="backbutton__container">
         <img src="images/backButton.png" class="backButton"></img>
       </div>
       
-      <!--Explainations-->
+      <!--PAGE CONTENTS-->
       <div class="instruction__container">
         <!--MAIN FIND YOUR FIT DESCRIPTION-->
         <span class="fit__title"><b>Find Your Fit</b><br></span>
@@ -80,10 +68,9 @@
         <!--SKI SIZING SECTION-->
         <span class="fit__title"><b>Ski sizing</b><br></span>
         Below is a calculator that takes your inputed weight and displays the proper ski size for you. Reminder to never walk with your skis on hard surfaces such as concrete.
-      </div>
-      
-      <!--Fit calculator-->
-      <div class="calculator__container">
+        
+        
+        <!---------------------------------------FIT CALCULATOR FORM------------------------------------->
         <form oninput="
         //Variable Initalization
         var dropdown = document.getElementById('weightSelector');
@@ -120,11 +107,11 @@
           <div class="output__box">
             Ski Size: 
             <b>
-            <output name="result">???</output>
+            <output name="result"></output>
             </b>
           </div>
         </form>
-      </div>
-    </div>
+
+      </div><!--END OF PAGE CONTENTS-->
   </body>
 </html>

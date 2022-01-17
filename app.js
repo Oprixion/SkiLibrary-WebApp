@@ -28,7 +28,9 @@ function validateAnswer(){
 
             numberOfCorrectAnswers++;
         }
-        //if the answer is not correct 
+        if(numberOfCorrectAnswers == 5){
+            document.getElementById("toWaiverPage").disabled=false
+        }
         
     }  
 }

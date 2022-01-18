@@ -41,9 +41,10 @@
             BY SIGNING THIS FORM, YOU ACCEPT CERTAIN LEGAL OBLIGATIONS AND GIVE UP IMPORTANT LEGAL RIGHTS, INCLUDING THE RIGHT TO SUE
         </h3>
 
+        
         <div class="container mt-5">
           <div class="row">
-            <form>
+            <form action="config.php" method="post">
               <div class="row">
                 <h4>Participant</h4>
                 <div class="col-sm-4">
@@ -275,7 +276,7 @@
                       <button onclick="can.erase();">Erase</button>
                   </span>
               
-                  <script type="text/javascript" src="test.js"></script>
+                  <script type="text/javascript" src="handwriting.js"></script>
                   <script type="text/javascript">
                   var can = new handwriting.Canvas(document.getElementById("can"), 3);
                   can.setCallBack(function(data, err) {
@@ -306,7 +307,8 @@
               </div>
             </div>
             <div>
-              <a class="button_generic" href="certificationPage.html">Submit</a>
+              <!-- <a class="button_generic" href="certificationPage.html">Submit</a> -->
+              <button type="submit" name="submit">Submit</button>
             </div>
             </form>
           </div>

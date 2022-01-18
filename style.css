@@ -66,11 +66,13 @@
 .right__image{
     float: right;
     width: 20%;
+    margin-left: .5%;
 }
 
 .left__image{
     float: left;
     width: 20%;
+    margin-right: .5%;
 }
 
 @media screen and (max-width:800px) {

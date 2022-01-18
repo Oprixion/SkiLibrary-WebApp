@@ -1,3 +1,22 @@
+<?php 
+  require "config.php";
+
+  if (isset($_GET['patron'])){
+    $id = $_GET['patron'];
+
+    $statement = "SELECT fName, lName
+                  FROM PATRON
+                  WHERE $id = idNumber";
+    
+    $query = mysqli_query($connection, $statement);
+    $result = mysqli_fetch_array($query);
+    $firstName = $result[0];
+    $lastName = $result[1];
+  }
+  ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,8 +56,9 @@
     <img src="images/certificate.png" class="certificate__image">
     <!--Certification info-->
     <div class="info__container">
-      <div class="name"><b>Name: </b></div> Is eligible to borrow ski equipments <br>
-      <div class="studentID"><b>ID:</b></div>
+      <div class="name"><b>Name:</b> <?php echo($firstName)?> <?php echo($lastName)?>
+      </div> Is eligible to borrow ski equipments <br>
+      <div class="studentID"><b>ID:</b> <?php echo($id)?></div>
     </div>
     </div>
     
@@ -46,10 +66,6 @@
     <div class="instruction__container"> Take a screenshot of this photo and show it to the 
       library staff to recieve your sticker. A copy of this will also be sent to your email
     </div>
-    <!--fit calculator button-->
-    <button class="back__button">
-      Back
-    </button>
   </div>
       
 </body>

@@ -119,7 +119,7 @@
                               </p>
                             </td>
 
-                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                            <td><div class="acknowledge"><input type="checkbox" id="cb1" onclick="checkCheckBoxes()"></div></td>
                         </tr>
                         
                         <tr>
@@ -142,7 +142,7 @@
                               </p>                            
                             </td>
 
-                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                            <td><div class="acknowledge"><input type="checkbox" id="cb2" onclick="checkCheckBoxes()"></div></td>
                         </tr>
         
                         <tr>
@@ -179,7 +179,7 @@
                                 Call 911 for Emergencies
                               </p>
                             </td>
-                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                            <td><div class="acknowledge"><input type="checkbox" id="cb3" onclick="checkCheckBoxes()"></div></td>
                         </tr>
                     </tbody>
                 </table>
@@ -224,7 +224,7 @@
                               Boots are only to be worn on snow and soft surfaces. No pavement or gravel!
                             </p>
                           </td>
-                          <td><div class="acknowledge"><input type="checkbox"></div></td>
+                          <td><div class="acknowledge"><input type="checkbox" id="cb4" onclick="checkCheckBoxes()"></div></td>
                         </tr>
                       
         
@@ -248,7 +248,7 @@
                               </p>
                             </td>
 
-                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                            <td><div class="acknowledge"><input type="checkbox" id="cb5" onclick="checkCheckBoxes()"></div></td>
                         </tr>
                         
                         <tr>
@@ -279,7 +279,7 @@
 
                               </p>
                             </td>
-                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                            <td><div class="acknowledge"><input type="checkbox" id="cb6" onclick="checkCheckBoxes()"></div></td>
                         </tr>
 
                         <tr>
@@ -299,7 +299,7 @@
                               </p>
                             </td>
 
-                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                            <td><div class="acknowledge"><input type="checkbox" id="cb7" onclick="checkCheckBoxes()"></div></td>
                         </tr>
 
                         <tr>
@@ -313,7 +313,7 @@
                                 Questions about Gear, Instruction, Social Ski Opportunities &/or Recreation on Campus? <strong>augrec@ualberta.ca</strong>
                               </p>
                             </td>
-                            <td><div class="acknowledge"><input type="checkbox"></div></td>
+                            <td><div class="acknowledge"><input type="checkbox" id="cb8" onclick="checkCheckBoxes()"></div></td>
                         </tr>
 
                     </tbody>
@@ -330,13 +330,16 @@
           <br><br>
   
           <div>
-            <input type="checkbox"> I acknowledge that I have read understood the contents of this orientation
+            <input type="checkbox" id="cb9" onclick="checkMissing()"> I acknowledge that I have read understood the contents of this orientation
             <br><br>
-            <a class="button_generic" href="quizPage.html">Continue</a>
+            <button id="continue__button2" class="continue__button" onclick="toQuizPage()" disabled>
+              Continue
+            </button>
           </div>
         </div>
       </div>
 
+      <script src="app.js"></script>
       <!-- Bootstrap inclusions -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

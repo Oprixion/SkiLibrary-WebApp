@@ -1,7 +1,8 @@
 <?php
 require "config.php";
-
 if (isset($_POST['submit'])) {
+
+  echo("POOP");
 
   $firstName = $_POST['firstName'];
   $lastName = $_POST['lastName'];
@@ -14,7 +15,8 @@ if (isset($_POST['submit'])) {
   $emergency_lastName = $_POST['emergency_lastname'];
   $emergency_phoneNumber = $_POST['emergency_phoneNumber'];
 
-  $sql  = "INSERT INTO PATRON VALUES ('$firstName',
+  $sql  = "INSERT INTO PATRON VALUES (
+    '$firstName',
     '$lastName',
     '$idNumber',
     '$age',
@@ -27,10 +29,18 @@ if (isset($_POST['submit'])) {
     )";
 
   mysqli_query($connection, $sql);
-  header('Location: certificationPage.html');
-} else {
-  //SOMETHING'S GONE HORRIBLY WRONG
-}
 
+  ?>
+  <html>
+    <script>
+      document.location.href="certificationPage.php?patron=2222";
+    </script>
+  </html>
+
+  <?php
+  
+} else {
+  echo("Something has gone wrong :(");
+}
 
 ?>

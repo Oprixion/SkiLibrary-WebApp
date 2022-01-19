@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "nodemailer": "^6.7.2"
+  },
+  "name": "ski-library",
+  "description": "handwriting.js is used and modified under MIT license",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AUCSC320-2017/SkiLibrary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AUCSC320-2017/SkiLibrary/issues"
+  },
+  "homepage": "https://github.com/AUCSC320-2017/SkiLibrary#readme"
+}

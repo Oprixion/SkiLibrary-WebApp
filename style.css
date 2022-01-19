@@ -280,7 +280,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /*------------------Quiz Page---------------------*/
-.toWaiverPage__button{
+.continue__button{
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -291,8 +291,8 @@ input[type=number]::-webkit-outer-spin-button {
     color: #F2CD00;
     background-color: #275D38;;   
 }
-.toWaiverPage__button:disabled,
-.toWaiverPage__button[disabled]{
+.continue__button:disabled,
+.continue__button[disabled]{
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
@@ -306,6 +306,11 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 4px 2px;
     cursor: pointer;
     color: #F2CD00;
-    background-color: #275D38;; 
+    background-color: #275D38; 
 }
 /*-----------------End of Quiz Page---------------*/
+
+.btn-primary{
+    color: #F2CD00 !important;
+    background-color: #275D38 !important;
+}

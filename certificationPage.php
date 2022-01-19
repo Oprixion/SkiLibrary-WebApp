@@ -66,6 +66,12 @@
     <div class="instruction__container"> Take a screenshot of this photo and show it to the 
       library staff to recieve your sticker. A copy of this will also be sent to your email
     </div>
+
+    <button class="back__button">
+      <a href="homePage.html">Home</a>
+    </button>
+
+
   </div>
       
 </body>

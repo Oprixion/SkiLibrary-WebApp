@@ -6,6 +6,13 @@
     scroll-behavior: smooth;  
   }
 
+  body {
+      background-image: url(images/augustana_background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+  }
+
 /*----------------------------------Common Atribute------------------------------------------------------*/
 .navbar__item {
     display: inline;
@@ -38,7 +45,7 @@
 .navbar__container {
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 90%;
     z-index: 1;
     width: 100%;
     max-width: 1900px;
@@ -63,16 +70,6 @@
     display: flex;
 }
 
-.right__image{
-    float: right;
-    width: 20%;
-}
-
-.left__image{
-    float: left;
-    width: 20%;
-}
-
 @media screen and (max-width:800px) {
     .left__image, .right__image{
         width: 0%;
@@ -80,12 +77,11 @@
 }
 
 .middle__elements{
+    background-color: white;
     width: 60%; 
-    height: auto;
+    padding: 20px;
     margin: 0 auto;
-    padding: 10px;
-    position: relative; 
-    
+    padding-bottom:50px;
 }
 @media screen and (max-width:800px) {
   .middle__elements{
@@ -309,6 +305,11 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 4px 2px;
     cursor: pointer;
     color: #F2CD00;
-    background-color: #275D38;; 
+    background-color: #275D38; 
 }
 /*-----------------End of Quiz Page---------------*/
+
+.btn-primary{
+    color: #F2CD00 !important;
+    background-color: #275D38 !important;
+}

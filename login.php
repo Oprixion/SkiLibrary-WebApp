@@ -72,19 +72,13 @@ if (isset($_POST['submit'])) {
                 </ul>
             </div>
         </div>
-        
-        <!-- Side Images -->
-        <div>
-            <img src="images/left.jpg" class="left__image">
-            <img src="images/right.jpg" class="right__image">
-        </div>
 
-        <!--Back Button-->
-      <form action="homePage.html">
-        <button class="back__button"><b>Back</b></button>
-      </form>
         <!---------------------------------------PAGE CONTENTS------------------------------------->
         <div class="middle__elements">
+            <!--Back Button-->
+            <form action="homePage.html">
+                <button class="back__button"><b>Back</b></button>
+              </form>
             <!-- Title and Description -->
             <br>
             <b>Certification Login</b><br>

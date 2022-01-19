@@ -9,10 +9,20 @@
   body {
       background-image: url(images/background_colour.png), url(images/augustana_background.jpg);
       background-repeat: no-repeat, no-repeat;
-      background-size: 60% 100%,cover;
-      background-attachment: fixed ,fixed;
+      background-size: 60% 100%, cover;
+      background-attachment: fixed, fixed;
       background-position: center;
   }
+  @media screen and (max-width:900px){
+    body{
+        background-image: url(images/background_colour.png);
+        background-repeat: no-repeat;
+        background-size: 60% 100%;
+        background-attachment: fixed;
+        background-position: center;
+      }
+  }
+  
 
 /*----------------------------------Common Atribute------------------------------------------------------*/
 .navbar__item {

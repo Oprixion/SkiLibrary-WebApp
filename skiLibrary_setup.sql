@@ -2,17 +2,22 @@ DROP DATABASE IF EXISTS SKI_LIBRARY;
 CREATE DATABASE SKI_LIBRARY;
 USE SKI_LIBRARY;
 
-CREATE TABLE PATRON
-(
+DROP TABLE IF EXISTS PATRON;
+CREATE TABLE PATRON (
     fName VARCHAR(20) NOT NULL,
     lName VARCHAR(20) NOT NULL,
     idNumber DECIMAL NOT NULL, 
     age DECIMAL,
-    Address VARCHAR(30) NOT NULL,
+    email VARCHAR(30) NOT NULL,
+    address VARCHAR(30) NOT NULL,
     city VARCHAR(20) NOT NULL,
     province VARCHAR(20),
-    emergency_fName VARCHAR(20),
+    emergency_relation VARCHAR(20),
+    emergency_firstName VARCHAR(20),
     emergency_lastName VARCHAR(20),
     emergency_phoneNumber DECIMAL,
     PRIMARY KEY (idNumber)
-)
+);
+
+SELECT * FROM PATRON;
+DELETE FROM PATRON;

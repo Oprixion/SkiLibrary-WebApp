@@ -29,16 +29,9 @@ if (isset($_POST['submit'])) {
             </script>
         </html>
 
-        <?php
-        
+        <?php  
     }
-
-
-    
-
 }
-
-
 ?>
 
 <!DOCTYPE html>

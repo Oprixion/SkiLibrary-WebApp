@@ -10,6 +10,9 @@
     
     $query = mysqli_query($connection, $statement);
     $result = mysqli_fetch_array($query);
+    if (empty($result)){
+      echo("SHIT!");
+    }
     $firstName = $result[0];
     $lastName = $result[1];
   }

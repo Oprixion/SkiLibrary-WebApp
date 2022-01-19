@@ -7,10 +7,11 @@
   }
 
   body {
-      background-image: url(images/augustana_background.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
+      background-image: url(images/background_colour.png), url(images/augustana_background.jpg);
+      background-repeat: no-repeat, no-repeat;
+      background-size: 60% 100%,cover;
+      background-attachment: fixed ,fixed;
+      background-position: center;
   }
 
 /*----------------------------------Common Atribute------------------------------------------------------*/
@@ -70,7 +71,7 @@
     display: flex;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:900px) {
     .left__image, .right__image{
         width: 0%;
     }  
@@ -83,7 +84,7 @@
     margin: 0 auto;
     padding-bottom:50px;
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:900px) {
   .middle__elements{
       width: 100%;
   }  

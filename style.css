@@ -194,12 +194,23 @@ th {
 }
 
 #row-header {
-
     width: 10%;
 }
 
 .acknowledge {
     margin-left: 50%;
+}
+.orientation__container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#headingOne, #headingTwo{
+    background-color: #275D38!important;
+}
+#general__expand,#sizing__expand{
+    text-decoration: none;
+    color: #F2CD00;
 }
 
 /*------------------------------------------------------------End of Orientation Page--------------------------------------------------------*/
@@ -213,10 +224,7 @@ th {
       padding-top: 10px;
   }
       
-  .orientation__container {
-      margin-left: auto;
-      margin-right: auto;
-  }
+
   
 /*-----------------------------------Certification Page-----------------------------------------------------------------*/
 .certificate__elements{
@@ -325,6 +333,10 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
     color: #F2CD00;
     background-color: #275D38; 
+}
+#h1, #h2, #h3, #h4, #h5{
+    background-color: #275D38!important;
+    color: #F2CD00!important;
 }
 /*-----------------End of Quiz Page---------------*/
 

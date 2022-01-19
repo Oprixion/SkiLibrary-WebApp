@@ -25,26 +25,11 @@
   
 
 /*----------------------------------Common Atribute------------------------------------------------------*/
-.navbar__item {
-    display: inline;
-    color: #F2CD00;
-    font-size:large;
-    font-weight: 450;
-    margin: 10px;
-    margin-bottom: 0px;
-}
-
-
-.navbar__links {
-    text-decoration: none;
-}
-.navbar__links:link,.navbar__links:visited{
-    color: #F2CD00;
-}
 
 .navbar {
     background: #275D38;
     height: 80px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,33 +43,38 @@
     justify-content: space-between;
     height: 90%;
     z-index: 1;
-    width: 100%;
-    max-width: 1900px;
+    width: 95%;
     margin: auto;
 }
 
 .main__title {
     margin-right: auto;
-    margin-top: 1%;
-    font-size: 25px;
+    margin-top: 15px;
+    font-size: xx-large;
     font-weight: 200;
     color: #F2CD00;
     text-decoration: none;
 }
 
+@media screen and (max-width:900px) {
+    .main__title {
+        margin-top: 40px;
+        font-size: large;
+    }
+  }
+
 .navbar__links{
     font-weight: 200;
     margin-top: 13px;
+    text-decoration: none;
+}
+
+.navbar__links:link,.navbar__links:visited{
+    color: #F2CD00;
 }
 
 #navbar__logo {
-    display: flex;
-}
-
-@media screen and (max-width:900px) {
-    .left__image, .right__image{
-        width: 0%;
-    }  
+    height: 100%;
 }
 
 .middle__elements{
@@ -94,6 +84,7 @@
     margin: 0 auto;
     padding-bottom:50px;
 }
+
 @media screen and (max-width:900px) {
   .middle__elements{
       width: 100%;

@@ -2,8 +2,6 @@
 require "config.php";
 if (isset($_POST['submit'])) {
 
-  echo("POOP");
-
   $firstName = $_POST['firstName'];
   $lastName = $_POST['lastName'];
   $idNumber = $_POST['idNumber'];
@@ -33,7 +31,7 @@ if (isset($_POST['submit'])) {
   ?>
   <html>
     <script>
-      document.location.href="certificationPage.php?patron=2222";
+      document.location.href="certificationPage.php?patron=<?php echo($idNumber);?>";
     </script>
   </html>
 

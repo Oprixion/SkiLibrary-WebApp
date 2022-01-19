@@ -1,3 +1,46 @@
+<?php 
+
+require "config.php";
+
+
+// Assume id number has been entered.
+
+if (isset($_POST['submit'])) {
+    $id = $_POST['idNumber'];
+
+
+
+    $statement = "SELECT fName, lName, idNumber
+                FROM PATRON
+                WHERE $id = idNumber";
+                
+    $query = mysqli_query($connection, $statement);
+    // echo(typeof($query));
+    $result = mysqli_fetch_array($query);
+
+    if (empty($result)){
+        $noSuchRecord = "No record found associated with ID $id";
+    } else {
+        ?>
+
+        <html>
+            <script>
+                document.location.href="certificationPage.php?patron=<?php echo($id);?>";
+            </script>
+        </html>
+
+        <?php
+        
+    }
+
+
+    
+
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -41,19 +84,17 @@
         <button class="back__button"><b>Back</b></button>
       </form>
         <!---------------------------------------PAGE CONTENTS------------------------------------->
-        <div class="content__container">
+        <div class="middle__elements">
             <!-- Title and Description -->
             <br>
             <b>Certification Login</b><br>
-            DESCRIPTION
+            Enter your student ID to verify certification status.
             <br>
             <!-- Login form -->
-            <form onsubmit="">
+            <form action="loginPage.php" method="post">
                 <br>
-                First Name <input type="text" placeholder="John" required=1>
-                Last Name <input type="text" placeholder="Smith" required=1><br>
-                Student ID: <input type="text" placeholder="1234567" required=1><br><br>
-                <button class="back__button"><b>View Ski Pass</b></button>
+                Student ID: <input type="number" placeholder="1234567" name="idNumber" required=1><br><br>
+                <button type="submit" name="submit"><b>View Ski Pass</b></button>
             </form>
         </div>
     </body>

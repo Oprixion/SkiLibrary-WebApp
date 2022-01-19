@@ -14,11 +14,16 @@
     <!--Navbar Section-->
     <div class="navbar">
       <div class="navbar__container">
-        <img id="navbar__logo" src="images/ualbertasmalllogo.png" alt="logo">
-        <a href="homePage.html" class="main__title">Augustana Ski Library</a>
         <!--Navbar items-->
-        <a href="#about" class="navbar__links" id="howtouse-page" style="margin-right: 20px;">About</a>
-        <a href="#howtouse" class="navbar__links" id="about-page" style="text-align: right;">HowtoUse</a>
+        <div class="title__container">
+          <img id="navbar__logo" src="images/ualbertasmalllogo.png" alt="logo">
+        <a href="homePage.html" class="main__title">Augustana Ski Library</a>
+        </div>
+        <div class="items__container">
+          <a href="#about" class="navbar__links" id="howtouse-page" style="margin-right: 20px;">About</a>
+          <a href="#howtouse" class="navbar__links" id="about-page" style="text-align: right;">HowtoUse</a>
+        </div>
+        
       </div>
     </div>
 
@@ -38,26 +43,6 @@
         <form action="homePage.html">
           <button class="back__button"><b>Back</b></button>
         </form>
-        
-        <div class="orientation__container">
-          <h1>2021-22 Augustana Campus Winter Recreation & Nordic Ski Library
-              Checklist</h1><br><br>
-      
-          <form>
-            <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" class="form-control" id="firstName">
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input type="text" class="form-control" id="lastName">
-            </div>
-            <div class="form-group">
-              <label for="idNumber">ID Number</label>
-              <input type="number" class="form-control" id="idNumber" aria-describedby="idHelp">
-              <small id="idHelp" class="form-text text-muted">Typically your CCID</small>
-            </div>
-          </form>
 
           <!-- Bootstrap accordion -->
           <div id="accordion">

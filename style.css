@@ -41,19 +41,34 @@
 .navbar__container {
     display: flex;
     justify-content: space-between;
-    height: 90%;
+    height: 95%;
     z-index: 1;
-    width: 95%;
+    width: 99%;
     margin: auto;
+    
+}
+.items__container{
+    width: 20%;
+}
+.title__container{
+    width: 80%;
 }
 
 .main__title {
     margin-right: auto;
-    margin-top: 15px;
+    white-space: nowrap;
     font-size: xx-large;
-    font-weight: 200;
+    font-weight: 400;
     color: #F2CD00;
     text-decoration: none;
+}
+.main__title:active{
+    color: #F2CD00;
+    text-decoration: none;
+}
+.main__title:hover{
+    text-decoration: none;
+    color: #F2CD00;
 }
 
 @media screen and (max-width:900px) {
@@ -187,9 +202,6 @@ th {
     margin-left: 50%;
 }
 
-.acknowledge input #cb1{
-    background-color: red;
-}
 /*------------------------------------------------------------End of Orientation Page--------------------------------------------------------*/
 
 
@@ -239,6 +251,7 @@ th {
     height: 30px;
     margin-left: 1%;
     margin-top: 1%;
+    margin-bottom: 4%;
 
     font-size: 18px;
     font-weight: 400;

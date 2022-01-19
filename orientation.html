@@ -10,20 +10,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <!--Navbar Section(NAVBAR IS OFF CENTERED FOR SOME REASON?)-->
+
+    <!--Navbar Section-->
     <div class="navbar">
       <div class="navbar__container">
-        <a href="#" id="navbar__logo"><img src="images/ualbertasmalllogo.png" alt="logo"></a>
-        <a href="homePage.html" class="main__title"> Augustana Ski Library</a>
-        <ul class="navbar__menu">
-            <!--Navbar items-->
-          <li class="navbar__item">
-            <a href="#about" class="navbar__links" id="howtouse-page">About</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#howtouse" class="navbar__links" id="about-page">How to use</a>
-          </li>
-        </ul>
+        <!--Navbar items-->
+        <div class="title__container">
+          <img id="navbar__logo" src="images/ualbertasmalllogo.png" alt="logo">
+        <a href="homePage.html" class="main__title">Augustana Ski Library</a>
+        </div>
+        <div class="items__container">
+          <a href="#about" class="navbar__links" id="howtouse-page" style="margin-right: 20px;">About</a>
+          <a href="#howtouse" class="navbar__links" id="about-page" style="text-align: right;">HowtoUse</a>
+        </div>
+        
       </div>
     </div>
 
@@ -43,33 +43,13 @@
         <form action="homePage.html">
           <button class="back__button"><b>Back</b></button>
         </form>
-        
-        <div class="orientation__container">
-          <h1>2021-22 Augustana Campus Winter Recreation & Nordic Ski Library
-              Checklist</h1><br><br>
-      
-          <form>
-            <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" class="form-control" id="firstName">
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input type="text" class="form-control" id="lastName">
-            </div>
-            <div class="form-group">
-              <label for="idNumber">ID Number</label>
-              <input type="number" class="form-control" id="idNumber" aria-describedby="idHelp">
-              <small id="idHelp" class="form-text text-muted">Typically your CCID</small>
-            </div>
-          </form>
 
           <!-- Bootstrap accordion -->
           <div id="accordion">
             <div class="card">
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="general__expand">
                     General Guidelines
                   </button>
                 </h5>
@@ -116,7 +96,7 @@
                               </p>
                             </td>
 
-                            <td><div class="acknowledge"><input type="checkbox" id="cb1" onclick="checkCheckBoxes()"></div></td>
+                            <td><div class="acknowledge"><input type="checkbox" id="cb1" class="cb1" onclick="checkCheckBoxes()"></div></td>
                         </tr>
                         
                         <tr>
@@ -186,7 +166,7 @@
             <div class="card">
               <div class="card-header" id="headingTwo">
                 <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="sizing__expand">
                     Equipment sizing, use and care
                   </button>
                 </h5>

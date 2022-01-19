@@ -13,26 +13,20 @@
     <!--Navbar Section-->
     <div class="navbar">
       <div class="navbar__container">
-          <a href="#" id="navbar__logo"><img src="images/logo.PNG" alt="logo"></a>
-          <a href="#homePage.html" class="main__title"> Augustana Ski Library</a>
-          <ul class="navbar__menu">
-              <!--Navbar items-->
-            <li class="navbar__item">
-              <a href="#howtouse" class="navbar__links" id="howtouse-page">About</a>
-            </li>
-            <li class="navbar__item">
-              <a href="#about" class="navbar__links" id="about-page">How to use</a>
-            </li>
-          </ul>
+        <!--Navbar items-->
+        <div class="title__container">
+          <img id="navbar__logo" src="images/ualbertasmalllogo.png" alt="logo">
+        <a href="homePage.html" class="main__title">Augustana Ski Library</a>
         </div>
-     </div>
+        <div class="items__container">
+          <a href="#about" class="navbar__links" id="howtouse-page" style="margin-right: 20px;">About</a>
+          <a href="#howtouse" class="navbar__links" id="about-page" style="text-align: right;">HowtoUse</a>
+        </div>
+        
+      </div>
+    </div>
 
    <!--Page Section-->
-    <div class="side__elements">
-        <!--Image setup-->
-        <img src="images/right.jpg" class="right__image">
-        <img src="images/left.jpg" class="left__image">
-    </div>
       <div class="middle__elements">
         <h1 class="liability_header" style="text-align: center;">Release of Liability, Assumption of Risks and Indemnity Agreement</h1>
         <h3 class="liability_subheader" style="text-align: center;">
@@ -277,7 +271,7 @@
             <div class="row">
               <div class="col">
                     <span style="display : inline-block">
-                      <canvas id="can" width="400" height="100" style="border: 2px solid; cursor: crosshair;"></canvas>
+                      <canvas id="can" width="400" height="100" style="border: 2px solid; cursor: crosshair; width: 100%;"></canvas>
                       <br>
                       <button onclick="can.erase();">Erase</button>
                   </span>

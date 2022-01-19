@@ -25,26 +25,11 @@
   
 
 /*----------------------------------Common Atribute------------------------------------------------------*/
-.navbar__item {
-    display: inline;
-    color: #F2CD00;
-    font-size:large;
-    font-weight: 450;
-    margin: 10px;
-    margin-bottom: 0px;
-}
-
-
-.navbar__links {
-    text-decoration: none;
-}
-.navbar__links:link,.navbar__links:visited{
-    color: #F2CD00;
-}
 
 .navbar {
     background: #275D38;
     height: 80px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,35 +41,55 @@
 .navbar__container {
     display: flex;
     justify-content: space-between;
-    height: 90%;
+    height: 95%;
     z-index: 1;
-    width: 100%;
-    max-width: 1900px;
+    width: 99%;
     margin: auto;
+    
+}
+.items__container{
+    width: 20%;
+}
+.title__container{
+    width: 80%;
 }
 
 .main__title {
     margin-right: auto;
-    margin-top: 1%;
-    font-size: 25px;
-    font-weight: 200;
+    white-space: nowrap;
+    font-size: xx-large;
+    font-weight: 400;
     color: #F2CD00;
     text-decoration: none;
 }
+.main__title:active{
+    color: #F2CD00;
+    text-decoration: none;
+}
+.main__title:hover{
+    text-decoration: none;
+    color: #F2CD00;
+}
+
+@media screen and (max-width:900px) {
+    .main__title {
+        margin-top: 40px;
+        font-size: large;
+    }
+  }
 
 .navbar__links{
     font-weight: 200;
     margin-top: 13px;
+    text-decoration: none;
+}
+
+.navbar__links:link,.navbar__links:visited{
+    color: #F2CD00;
 }
 
 #navbar__logo {
-    display: flex;
-}
-
-@media screen and (max-width:900px) {
-    .left__image, .right__image{
-        width: 0%;
-    }  
+    height: 100%;
 }
 
 .middle__elements{
@@ -94,6 +99,7 @@
     margin: 0 auto;
     padding-bottom:50px;
 }
+
 @media screen and (max-width:900px) {
   .middle__elements{
       width: 100%;
@@ -195,6 +201,7 @@ th {
 .acknowledge {
     margin-left: 50%;
 }
+
 /*------------------------------------------------------------End of Orientation Page--------------------------------------------------------*/
 
 
@@ -244,6 +251,7 @@ th {
     height: 30px;
     margin-left: 1%;
     margin-top: 1%;
+    margin-bottom: 4%;
 
     font-size: 18px;
     font-weight: 400;

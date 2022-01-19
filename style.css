@@ -195,6 +195,10 @@ th {
 .acknowledge {
     margin-left: 50%;
 }
+
+.acknowledge input #cb1{
+    background-color: red;
+}
 /*------------------------------------------------------------End of Orientation Page--------------------------------------------------------*/
 
 

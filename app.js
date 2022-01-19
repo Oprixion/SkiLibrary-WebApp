@@ -8,6 +8,7 @@ function calculatorButtonClicked(){
 //----------------------------------------------End Of Home Page--------------------------------------------//
 
 //----------------------------------------------------Orientation Page-------------------------------------//
+//verify if user has checked for the boxes
 function checkCheckBoxes(){
     var numberOfBoxesTicked = 0;
 
@@ -26,18 +27,26 @@ function checkCheckBoxes(){
     }
 
 }
-
+//verify if the user has checked all the previous boxes
 function checkMissing(){
     var numberOfBoxesTicked = 0;
-
     for (var i = 1; i<=8; i++){
         const checked = document.querySelector('input[id=cb'+i+']')
         if (checked.checked){
             numberOfBoxesTicked++;
         }
+        //lead the user to the missing check box
         else{
-            document.location.href="#cb"+(i-1)
-            document.querySelector('input[id=cb9]').checked=false
+            if(i<=3&&($('#collapseOne').is( ":hidden" ))){
+                document.getElementById('general__expand').click()
+                document.location.href="#cb"+(i)
+                document.querySelector('input[id=cb9]').checked=false
+            }else if(i>3&&(($('#collapseTwo').is( ":hidden" )))){
+                document.getElementById('sizing__expand').click()
+                document.location.href="#cb"+(i)
+                document.querySelector('input[id=cb9]').checked=false
+            }
+            
         }
         
     }

@@ -3,7 +3,7 @@ function beginButtonClicked(){
     document.location.href="orientation.html"
 }
 function calculatorButtonClicked(){
-    document.location.href="calculatorPage.html"
+    document.location.href="calculator.html"
 }
 //----------------------------------------------End Of Home Page--------------------------------------------//
 
@@ -12,13 +12,13 @@ function calculatorButtonClicked(){
 function checkCheckBoxes(){
     var numberOfBoxesTicked = 0;
 
-    for (var i = 1; i<=9; i++){
+    for (var i = 0; i<=8; i++){
         const checked = document.querySelector('input[id=cb'+i+']')
         if (checked.checked){
             numberOfBoxesTicked++;
         }
         else{
-            document.querySelector('input[id=cb9]').checked=false
+            document.querySelector('input[id=cb8]').checked=false
             document.getElementById('continue__button2').disabled=true
         }  
     }
@@ -30,21 +30,31 @@ function checkCheckBoxes(){
 //verify if the user has checked all the previous boxes
 function checkMissing(){
     var numberOfBoxesTicked = 0;
-    for (var i = 1; i<=8; i++){
+    for (var i = 0; i<=7; i++){
         const checked = document.querySelector('input[id=cb'+i+']')
         if (checked.checked){
             numberOfBoxesTicked++;
         }
         //lead the user to the missing check box
-        else{
-            if(i<=3&&($('#collapseOne').is( ":hidden" ))){
+        if(checked.checked==false){
+            document.querySelector('input[id=cb8]').checked=false
+            if(i<=2&&($('#collapseOne').is( ":hidden" ))){
                 document.getElementById('general__expand').click()
-                document.location.href="#cb"+(i)
-                document.querySelector('input[id=cb9]').checked=false
-            }else if(i>3&&(($('#collapseTwo').is( ":hidden" )))){
+                document.getElementById("cb"+i).scrollIntoView({behavior: "smooth", block: "center"});
+                return;
+            }
+            else if(i<=2&&($('#collapseOne').is( ":visible" ))){
+                document.getElementById("cb"+i).scrollIntoView({behavior: "smooth", block: "center"});
+                return
+            }
+            else if(i>2&&(($('#collapseTwo').is( ":hidden" )))){
                 document.getElementById('sizing__expand').click()
-                document.location.href="#cb"+(i)
-                document.querySelector('input[id=cb9]').checked=false
+                document.getElementById("cb"+i).scrollIntoView({behavior: "smooth", block: "center"});
+                return
+            }
+            else if(i>2&&(($('#collapseTwo').is( ":visible" )))){
+                document.getElementById("cb"+i).scrollIntoView({behavior: "smooth", block: "center"});
+                return
             }
             
         }
@@ -75,17 +85,32 @@ function validateAnswer(){
         //answer for question i
         var solution = correctAnswers[i-1];
         //if the answer if correct
-        if(checkedAnswer&&checkedAnswer.value == 'r'+solution){
+        console.log(i+" "+checkedAnswer.value)
+        if(checkedAnswer&&(checkedAnswer.value == 'r'+solution)){
             //highlight the answer green
+            clearStyle(i);
             document.getElementById('q'+i+'_r'+solution).parentNode.style.color='#5cb85c';
             document.getElementById('q'+i+'_r'+solution).parentNode.style.fontWeight='bold';
-
             numberOfCorrectAnswers++;
+            console.log("pass");
+        }
+        if(checkedAnswer&&(checkedAnswer.value != 'r'+solution)){
+            clearStyle(i);
+            document.getElementById('q'+i+'_'+checkedAnswer.value).parentNode.style.color='#FF0000';
+            document.getElementById('q'+i+'_'+checkedAnswer.value).parentNode.style.fontWeight='bold';
+            console.log("failed");
         }
         if(numberOfCorrectAnswers == 5){
             document.getElementById("continue__button").disabled=false
-        }
-        
-    }  
+        }      
+    }
+    
+}
+
+function clearStyle(questionNo){
+    for(var i=1; i<=4; i++){
+        document.getElementById('q'+questionNo+'_r'+i).parentNode.style.color='#292d31'
+        document.getElementById('q'+questionNo+'_r'+i).parentNode.style.fontWeight='400';
+    }
 }
 //------------------------------------------End of Quiz Page------------------------------------------------//

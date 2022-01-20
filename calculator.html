@@ -32,8 +32,15 @@
         <a href="home.html" class="main__title">Augustana Ski Library</a>
         </div>
         <div class="items__container">
-          <a href="#about" class="navbar__links" id="howtouse-page" style="margin-right: 20px;">About</a>
-          <a href="#howtouse" class="navbar__links" id="about-page" style="text-align: right;">HowtoUse</a>
+          <a href="https://www.ualberta.ca/augustana/student-life/campus-rec/ski-library/index.html" class="navbar__links" id="howtouse-page" style="margin-right: 20px;">About</a>
+          <a href="#howtouse" class="navbar__popup" id="howToUse-popup" style="text-align: right;" onclick="HowToUse__popup()">HowtoUse</a>
+            <div class="popup__container" id="popup__container">
+              <div class="slide__container">
+                <div class="slide5" id="slide5"><img src="images/5thPopupTransparent.png" width="100%" alt="slide5"></div>
+            
+              </div>
+              <button class="close__popup" onclick="closePopup()"> Close </button>
+            </div>
         </div>
         
       </div>
@@ -113,5 +120,6 @@
           </div>
         </form>
     </div><!--END OF PAGE CONTENTS-->
+    <script src="app.js"></script>
   </body>
 </html>

@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
 
         <html>
             <script>
-                document.location.href="certificationPage.php?patron=<?php echo($id);?>";
+                document.location.href="certificate.php?patron=<?php echo($id);?>";
             </script>
         </html>
 
@@ -78,7 +78,7 @@ if (isset($_POST['submit'])) {
             Enter your student ID to verify certification status.
             <br>
             <!-- Login form -->
-            <form action="loginPage.php" method="post">
+            <form action="login.php" method="post">
                 <br>
                 Student ID: <input type="number" placeholder="1234567" name="idNumber" required=1><br><br>
                 <button type="submit" name="submit"><b>View Ski Pass</b></button>

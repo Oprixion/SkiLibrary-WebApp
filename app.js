@@ -63,7 +63,7 @@ function toQuizPage(){
 
 //----------------------------------------------QuizPage----------------------------------------------------//
 function toWaiverPage(){
-    document.location.href="waiver.html"
+    document.location.href="waiver.php"
 }
 function validateAnswer(){
     var correctAnswers = [1, 3, 2, 3, 4]

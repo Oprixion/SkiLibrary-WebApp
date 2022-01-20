@@ -2,17 +2,19 @@
 
 require "config.php";
 
-
+$noSuchRecord='';
 // Assume id number has been entered.
 
 if (isset($_POST['submit'])) {
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
     $id = $_POST['idNumber'];
 
 
 
     $statement = "SELECT fName, lName, idNumber
                 FROM PATRON
-                WHERE $id = idNumber";
+                WHERE '$firstName' = fName AND '$lastName' = lname AND $id = idNumber";
                 
     $query = mysqli_query($connection, $statement);
     // echo(typeof($query));
@@ -50,26 +52,26 @@ if (isset($_POST['submit'])) {
 
     <body>
         <!---------------------------------------Navbar Section AND BACK BUTTON------------------------------------->
-        <div class="navbar">
-            <div class="navbar__container">
-                <a href="#" id="navbar__logo"><img src="images/ualbertasmalllogo.png" alt="logo"></a>
-                <a href="homePage.html" class="main__title"> Augustana Ski Library</a>
-                <ul class="navbar__menu">
-                    <!--Navbar items-->
-                    <li class="navbar__item">
-                        <a href="#about" class="navbar__links" id="howtouse-page">About</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#howtouse" class="navbar__links" id="about-page">How to use</a>
-                    </li>
-                </ul>
-            </div>
+    <!--Navbar Section-->
+    <div class="navbar">
+      <div class="navbar__container">
+        <!--Navbar items-->
+        <div class="title__container">
+          <img id="navbar__logo" src="images/ualbertasmalllogo.png" alt="logo">
+        <a href="home.html" class="main__title">Augustana Ski Library</a>
         </div>
+        <div class="items__container">
+          <a href="#about" class="navbar__links" id="howtouse-page" style="margin-right: 20px;">About</a>
+          <a href="#howtouse" class="navbar__links" id="about-page" style="text-align: right;">HowtoUse</a>
+        </div>
+        
+      </div>
+    </div>
 
         <!---------------------------------------PAGE CONTENTS------------------------------------->
         <div class="middle__elements">
             <!--Back Button-->
-            <form action="homePage.html">
+            <form action="home.html">
                 <button class="back__button"><b>Back</b></button>
               </form>
             <!-- Title and Description -->
@@ -80,9 +82,12 @@ if (isset($_POST['submit'])) {
             <!-- Login form -->
             <form action="login.php" method="post">
                 <br>
+                First name: <input type="text" placeholder="John" name="firstName" required=1><br><br>
+                Last name: <input type="text" placeholder="Smith" name="lastName" required=1><br><br>
                 Student ID: <input type="number" placeholder="1234567" name="idNumber" required=1><br><br>
                 <button type="submit" name="submit"><b>View Ski Pass</b></button>
             </form>
+            <h3 style="color:red"><?php echo $noSuchRecord; ?></h3>
         </div>
     </body>
 </html>

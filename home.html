@@ -19,11 +19,18 @@
         <a href="home.html" class="main__title">Augustana Ski Library</a>
         </div>
         <div class="items__container">
-          <a href="#about" class="navbar__links" id="about-page" style="margin-right: 20px;">About</a>
-          <a href="#howtouse" class="navbar__popup" id="howToUse-popup" style="text-align: right;" onclick="HowToUse__popup()">HowtoUse
+          <a href="https://www.ualberta.ca/augustana/student-life/campus-rec/ski-library/index.html" class="navbar__links" id="about-page" style="margin-right: 20px;">About</a>
+          <a href="#howtouse" class="navbar__popup" id="howToUse-popup" style="text-align: right;" onclick="HowToUse__popup()">HowtoUse</a>
             <div class="popup__container" id="popup__container">
-              <img class="popup__image1" src="images/1stPopupTransparent.png">
-            </div></a>
+              <div class="slide__container">
+                <div class="slide1" id="slide1"><img src="images/1stPopupTransparent.png" width="100%" alt="slide1"></div>
+                <div class="slide2" id="slide2"><img src="images/2ndPopupTransparent.png" width="100%" alt="slide2"></div>
+              </div>
+              
+              <button class="previous" onclick="toSlide1()"> Previous </button>
+              <button class="close__popup" onclick="closePopup()"> Close </button>
+              <button class="next" onclick="toSlide2()"> Next </button>
+            </div>
         </div>
         
       </div>
@@ -48,6 +55,10 @@
           Find Your Fit
         </button>
       </div>
-      <script src='app.js'></script> 
+        
+      <script src='app.js'></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
 </body>
 </html>

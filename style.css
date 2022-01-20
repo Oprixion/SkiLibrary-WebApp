@@ -49,6 +49,7 @@
 }
 .items__container{
     width: 20%;
+    
 }
 .title__container{
     width: 80%;
@@ -114,13 +115,23 @@
 .popup__container{
     visibility: hidden;
     width: 300px;
-    height: 200px;
-    background-color:thistle;
+    height: 258px;
+    background-color: transparent;
     position: absolute;
     z-index: 1;
-    top: 125%;
-    left: 50%;
-    margin-left: -265px
+    right: 12%;
+    white-space: nowrap;
+}
+@media screen and (max-width:900px){
+    .popup__container{
+        right: 8%;
+    }
+}
+
+.slide__container{
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
 }
 .navbar__popup{
     font-weight: 200;
@@ -138,22 +149,25 @@
 .navbar__popup:link,.navbar__popup:visited{
     color: #F2CD00;
 }
-.navbar__popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
+
+.next {
+    float: right;
+}
+.close__popup{
+    margin:auto 20%;
+}
+.previous{
+    float: left;
+}
+.next, .previous, .close__popup{
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #275D38;
+    color: #F2CD00;
+}
+
+ 
 /*----------------------------------End of Popup Atribute------------------------------------------------------*/
 
 /*-------------------------------Home Page--------------------------------------------------------------*/
@@ -212,7 +226,7 @@
     color: #275D38;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:900px) {
     .begin__button, .home__logo,.calculator__button{
         width: 70%;
         margin-left: 15%;

@@ -4,12 +4,6 @@ if (isset($_POST['submit'])) {
 
   $sendMail = true;
 
-  foreach ($_POST as $key => $value){
-    if (gettype($value) == 'string') {
-      strtoupper($value);
-    }
-  }
-
   $firstName   = $_POST['firstName'];
   $lastName    = $_POST['lastName'];
   $idNumber    = $_POST['idNumber'];
@@ -55,11 +49,17 @@ try{
     fclose($log);
 
     $sendMail =false;
+
+    if (str_contains($e, 'Duplicate entry')){
+      $fault = 'exists';
+    } else {
+      $fault = 'failed';
+    }
     
     ?>
   <html>
     <script>
-      document.location.href="waiver.php?status=<?php echo('failed');?>";
+      document.location.href="waiver.php?status=<?php echo($fault);?>";
     </script>
   </html>
 
@@ -69,9 +69,10 @@ try{
 
 
  require "editor.php";
- 
+ $script_args = "python mail.py" . " " . $filename;
+
 if ($sendMail){
-  echo shell_exec("python mail.py");
+  echo shell_exec($script_args);
 }
 
  ?>

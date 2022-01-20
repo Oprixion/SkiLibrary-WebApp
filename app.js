@@ -5,6 +5,20 @@ function beginButtonClicked(){
 function calculatorButtonClicked(){
     document.location.href="calculator.html"
 }
+function HowToUse__popup() {
+    var popup = document.getElementById("popup__container");
+    popup.style.visibility="initial"
+}
+function toSlide2(){
+    document.getElementById("slide2").scrollIntoView({behavior: "auto", block: "center"});
+}
+function toSlide1(){
+    document.getElementById("slide1").scrollIntoView({behavior: "auto", block: "center"});
+}
+function closePopup(){
+    var popup = document.getElementById("popup__container");
+    popup.style.visibility="hidden"
+}
 //----------------------------------------------End Of Home Page--------------------------------------------//
 
 //----------------------------------------------------Orientation Page-------------------------------------//

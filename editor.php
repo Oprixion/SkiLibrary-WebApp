@@ -20,7 +20,9 @@ $new  = str_replace('ini_p', $ini_para1, $new);
 $date = date('jS \d\a\y \of F, Y ');
 $new  = str_replace('p_date', $date, $new);
 
-$file = fopen('waiver.xml', 'w');
+
+$filename = 'waiver_' . $lastName . ',' . $firstName . '.xml';
+$file = fopen($filename, 'w');
 
 fwrite($file, $new);
 fclose($file);

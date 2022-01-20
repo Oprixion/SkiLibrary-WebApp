@@ -9,6 +9,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://raw.githubusercontent.com/jakubfiala/atrament.js/master/dist/atrament.min.js"></script>
 </head>
+<script>
+  function alphabetOnly(input) {
+    var alphabet = /[^a-z]/gi;
+    input.value = input.value.replace(alphabet, "")
+  }
+  function numbersOnly(input) {
+    var numbers = /[^0-9]/gi;
+    input.value = input.value.replace(numbers, "")
+  }
+</script>
 <body>
     <!--Navbar Section-->
     <div class="navbar">
@@ -22,7 +32,6 @@
           <a href="#about" class="navbar__links" id="howtouse-page" style="margin-right: 20px;">About</a>
           <a href="#howtouse" class="navbar__links" id="about-page" style="text-align: right;">HowtoUse</a>
         </div>
-        
       </div>
     </div>
 
@@ -51,7 +60,7 @@
                 <h4>Participant</h4>
                 <div class="col-sm-4">
                   <label for="firstName">First Name:</label>
-                  <input type="text" class="form-control" name="firstName">
+                  <input type="text" class="form-control" name="firstName" onkeyup="alphabetOnly(this)" required=1>
                 </div>
                 <div class="col-sm-4">
                   <label for="lastName">Last Name:</label>

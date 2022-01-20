@@ -114,3 +114,7 @@ function clearStyle(questionNo){
     }
 }
 //------------------------------------------End of Quiz Page------------------------------------------------//
+
+function finalCheck(){
+    if (alert("Please ensure all information is correct"));
+}

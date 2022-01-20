@@ -2,6 +2,14 @@
 require "config.php";
 if (isset($_POST['submit'])) {
 
+  $sendMail = true;
+
+  foreach ($_POST as $key => $value){
+    if (gettype($value) == 'string') {
+      strtoupper($value);
+    }
+  }
+
   $firstName   = $_POST['firstName'];
   $lastName    = $_POST['lastName'];
   $idNumber    = $_POST['idNumber'];
@@ -45,6 +53,9 @@ try{
     $log = fopen('error.txt', 'w');
     fwrite($log, $e);
     fclose($log);
+
+    $sendMail =false;
+    
     ?>
   <html>
     <script>
@@ -58,8 +69,10 @@ try{
 
 
  require "editor.php";
-
- echo shell_exec("python mail.py");
+ 
+if ($sendMail){
+  echo shell_exec("python mail.py");
+}
 
  ?>
   <html>

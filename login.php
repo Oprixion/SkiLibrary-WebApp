@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
         <div class="navbar">
             <div class="navbar__container">
                 <a href="#" id="navbar__logo"><img src="images/ualbertasmalllogo.png" alt="logo"></a>
-                <a href="homePage.html" class="main__title"> Augustana Ski Library</a>
+                <a href="home.html" class="main__title"> Augustana Ski Library</a>
                 <ul class="navbar__menu">
                     <!--Navbar items-->
                     <li class="navbar__item">
@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
         <!---------------------------------------PAGE CONTENTS------------------------------------->
         <div class="middle__elements">
             <!--Back Button-->
-            <form action="homePage.html">
+            <form action="home.html">
                 <button class="back__button"><b>Back</b></button>
               </form>
             <!-- Title and Description -->

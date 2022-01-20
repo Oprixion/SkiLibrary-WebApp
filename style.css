@@ -108,6 +108,54 @@
 
 
 /*----------------------------------End of Common Atribute------------------------------------------------------*/
+
+/*--------------------------------------Popup Atribute---------------------------------------------------------*/
+
+.popup__container{
+    visibility: hidden;
+    width: 300px;
+    height: 200px;
+    background-color:thistle;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -265px
+}
+.navbar__popup{
+    font-weight: 200;
+    margin-top: 13px;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navbar__popup:link,.navbar__popup:visited{
+    color: #F2CD00;
+}
+.navbar__popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+/*----------------------------------End of Popup Atribute------------------------------------------------------*/
+
 /*-------------------------------Home Page--------------------------------------------------------------*/
 .home__logo{
     margin-top: 10%;

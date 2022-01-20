@@ -5,6 +5,10 @@ function beginButtonClicked(){
 function calculatorButtonClicked(){
     document.location.href="calculator.html"
 }
+function HowToUse__popup() {
+    var popup = document.getElementById("popup__container");
+    popup.classList.toggle("show");
+  }
 //----------------------------------------------End Of Home Page--------------------------------------------//
 
 //----------------------------------------------------Orientation Page-------------------------------------//

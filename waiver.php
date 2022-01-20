@@ -38,7 +38,14 @@
           if (isset($_GET['status'])){
             ?>
             <script>
-              alert("Invalid entry. Our records indicate a certification exists for the ID you have entered.")
+              <?php
+            if($_GET['status'] == 'exists'){
+              ?> alert("Invalid entry. Our records indicate a certification exists for the ID you have entered.");
+              <?php
+            } elseif ($_GET['status'] == 'failed'){
+              ?> alert("Invalid entry. Please ensure that all fields have been filled in correctly.");
+              <?php
+            } ?>
             </script>
             <?php
           }
@@ -316,6 +323,7 @@
               </div>
             </div>
             <div>
+              <h6><br><br><b>Please ensure that all form data is correct before submitting.<b></h6>
               <button type="submit" name="submit">Submit</button>
             </div>
             </form>

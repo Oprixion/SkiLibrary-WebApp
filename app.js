@@ -85,17 +85,32 @@ function validateAnswer(){
         //answer for question i
         var solution = correctAnswers[i-1];
         //if the answer if correct
-        if(checkedAnswer&&checkedAnswer.value == 'r'+solution){
+        console.log(i+" "+checkedAnswer.value)
+        if(checkedAnswer&&(checkedAnswer.value == 'r'+solution)){
             //highlight the answer green
+            clearStyle(i);
             document.getElementById('q'+i+'_r'+solution).parentNode.style.color='#5cb85c';
             document.getElementById('q'+i+'_r'+solution).parentNode.style.fontWeight='bold';
-
             numberOfCorrectAnswers++;
+            console.log("pass");
+        }
+        if(checkedAnswer&&(checkedAnswer.value != 'r'+solution)){
+            clearStyle(i);
+            document.getElementById('q'+i+'_'+checkedAnswer.value).parentNode.style.color='#FF0000';
+            document.getElementById('q'+i+'_'+checkedAnswer.value).parentNode.style.fontWeight='bold';
+            console.log("failed");
         }
         if(numberOfCorrectAnswers == 5){
             document.getElementById("continue__button").disabled=false
-        }
-        
-    }  
+        }      
+    }
+    
+}
+
+function clearStyle(questionNo){
+    for(var i=1; i<=4; i++){
+        document.getElementById('q'+questionNo+'_r'+i).parentNode.style.color='#292d31'
+        document.getElementById('q'+questionNo+'_r'+i).parentNode.style.fontWeight='400';
+    }
 }
 //------------------------------------------End of Quiz Page------------------------------------------------//

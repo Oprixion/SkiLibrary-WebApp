@@ -59,6 +59,8 @@ try{
 
  require "editor.php";
 
+ echo shell_exec("python mail.py");
+
  ?>
   <html>
     <script>

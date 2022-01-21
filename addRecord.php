@@ -1,42 +1,48 @@
 <?php
+/**
+ * 
+ * 
+ */
+
+
 require "config.php";
 
 if (isset($_POST['submit'])) {
 
   $sendMail = true;
 
-  $firstName   = $_POST['firstName'];
-  $lastName    = $_POST['lastName'];
+  $firstName   = strtoupper($_POST['firstName']);
+  $lastName    = strtoupper($_POST['lastName']);
   $idNumber    = $_POST['idNumber'];
 
-  // $sql = "SELECT fName, lName, idNumber
-  //         FROM  PERSONNEL
-  //         WHERE fName = $firstName
-  //             AND lName = $lastName
-  //             AND idNumber = $idNumber";
+  $sql = "SELECT fName, lName, idNumber
+          FROM  PERSONNEL
+          WHERE fName = '$firstName'
+              AND lName = '$lastName'
+              AND idNumber = $idNumber";
 
-  // $result = mysqli_query($connection, $sql);
+  $result = mysqli_query($connection, $sql);
+  try{
+    if (empty($result)){
+      throw new Exception ("Identity mismatch: unable to verify identity");
+    }
 
-  // if (!$sql){
-  //   header("Location: waiver.php?status=invalid");
-  // }
+    $age         = $_POST['age'];
+    $email       = strtoupper($_POST['email']);
+    $address     = strtoupper($_POST['address']);
+    $city        = strtoupper($_POST['city']);
+    $province    = strtoupper($_POST['province']);
 
-  $age         = $_POST['age'];
-  $email       = $_POST['email'];
-  $address     = $_POST['address'];
-  $city        = $_POST['city'];
-  $province    = $_POST['province'];
+    $e_relation  = strtoupper($_POST['emergency_relation']);
+    $e_firstName = strtoupper($_POST['emergency_firstName']);
+    $e_lastName  = strtoupper($_POST['emergency_lastName']);
+    $e_phone     = $_POST['emergency_phone'];
 
-  $e_relation  = $_POST['emergency_relation'];
-  $e_firstName = $_POST['emergency_firstName'];
-  $e_lastName  = $_POST['emergency_lastName'];
-  $e_phone     = $_POST['emergency_phone'];
+    $ini_para1   = strtoupper($_POST['initials_para1']);
+    $ini_para2   = strtoupper($_POST['initials_para2']);
 
-  $ini_para1   = $_POST['initials_para1'];
-  $ini_para2   = $_POST['initials_para2'];
 
-try{
-  $sql  = "INSERT INTO PATRON VALUES (
+    $sql  = "INSERT INTO PATRON VALUES (
     '$firstName',
     '$lastName',
     '$idNumber',
@@ -55,6 +61,10 @@ try{
     '$ini_para2'
     )";
 
+  if (empty($result)){
+    throw new Exception ("Invalid form data: field lengths have been exceeded in one or more entries");
+  }
+
   $result = mysqli_query($connection, $sql);
   } catch (Exception $e) {
     $log = fopen('error.txt', 'w');
@@ -63,43 +73,22 @@ try{
 
     $sendMail =false;
 
-    if (str_contains($e, 'Duplicate entry')){
+    if ((strpos($e, 'Identity mismatch') !== false)){
+      $fault = 'invalid';
+    } elseif (strpos($e, 'Duplicate entry') !== false) {
       $fault = 'exists';
     } else {
       $fault = 'failed';
     }
-    
-    ?>
-  <html>
-    <script>
-      document.location.href="waiver.php?status=<?php echo($fault);?>";
-    </script>
-  </html>
 
-  <?php
+    header("Location: waiver.php?status=" . $fault);
 
   }
 
-
  require "editor.php";
-//  $script_args = "python mail.py" . " " . $filename;
-
-// if ($sendMail){
-//   echo shell_exec($script_args);
-// }
-
- ?>
-  <html>
-    <script>
-      document.location.href="certificate.php?patron=<?php echo($idNumber);?>";
-    </script>
-  </html>
-
-  <?php
+ header("Location: certificate.php?patron=" . $idNumber);
   
-
 } else {
-  header("Location: waiver.php");
+  header("Location: waiver.php?status=unknown");
 }
-
 ?>

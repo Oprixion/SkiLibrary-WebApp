@@ -1,4 +1,12 @@
 <?php 
+/**
+ * 
+ * 
+ * 
+ * 
+ */
+
+ 
   require "config.php";
 
   if (isset($_GET['patron'])){
@@ -35,7 +43,7 @@
         <!--Navbar items-->
         <div class="title__container">
           <img id="navbar__logo" src="images/ualbertasmalllogo.png" alt="logo">
-        <a href="home.html" class="main__title">Augustana Ski Library</a>
+        <a href="index.html" class="main__title">Augustana Ski Library</a>
         </div>
         <div class="items__container">
           <a href="#about" class="navbar__links" id="howtouse-page" style="margin-right: 20px;">About</a>
@@ -63,7 +71,7 @@
     </div>
 
     <button class="back__button">
-      <a href="home.html">Home</a>
+      <a href="index.html">Home</a>
     </button>
     
   </div>

@@ -130,8 +130,8 @@ function clearStyle(questionNo){
 //------------------------------------------End of Quiz Page------------------------------------------------//
 
 // Nonfunctional for now but possibly the general idea?
-function saveSignature(){
-    var canvas = document.getElementById("mycanvas");
-    var img    = canvas.toDataURL("image/png");
-    document.write('<img src="'+img+'"/>');
-}
+// function saveSignature(){
+//     var canvas = document.getElementById("mycanvas");
+//     var img    = canvas.toDataURL("image/png");
+//     document.write('<img src="'+img+'"/>');
+// }

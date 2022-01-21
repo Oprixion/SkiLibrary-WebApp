@@ -28,4 +28,11 @@ fwrite($file, $new);
 fclose($file);
 
 
+$script_args = "python mail.py" . " " . $filename;
+
+if ($sendMail){
+  echo shell_exec($script_args);
+}
+
+
 ?>

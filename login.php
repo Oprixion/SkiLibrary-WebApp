@@ -62,7 +62,13 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="items__container">
           <a href="#about" class="navbar__links" id="howtouse-page" style="margin-right: 20px;">About</a>
-          <a href="#howtouse" class="navbar__links" id="about-page" style="text-align: right;">HowtoUse</a>
+          <a href="#howtouse" class="navbar__popup" id="howToUse-popup" style="text-align: right;" onclick="HowToUse__popup()">HowtoUse</a>
+            <div class="popup__container" id="popup__container">
+              <div class="slide__container">
+                <div class="slide8" id="slide8"><img src="images/8thPopupTransparent.png" width="100%" alt="slide8"></div>
+                
+              </div>
+              <button class="close__popup" onclick="closePopup()"> Close </button>
         </div>
         
       </div>

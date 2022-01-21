@@ -9,16 +9,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://raw.githubusercontent.com/jakubfiala/atrament.js/master/dist/atrament.min.js"></script>
 </head>
+
 <script>
+  function showSnackbar() {
+    var a = document.getElementById("snackbar")
+    a.className = "show"
+    setTimeout(function(){ a.className = a.className.replace("show", ""); }, 3000);
+  }
   function alphabetOnly(input) {
     var alphabet = /[^a-z]/gi;
-    input.value = input.value.replace(alphabet, "")
+    input.value = input.value.replace(alphabet, "");
   }
   function numbersOnly(input) {
-    var numbers = /[^0-9]/gi;
-    input.value = input.value.replace(numbers, "")
+    var numbers = /[^0-9]/g;
+    input.value = input.value.replace(numbers, "");
   }
 </script>
+
 <body>
     <!--Navbar Section-->
     <div class="navbar">
@@ -71,11 +78,11 @@
                 </div>
                 <div class="col-sm-4">
                   <label for="lastName">Last Name:</label>
-                  <input type="text" class="form-control" name="lastName">
+                  <input type="text" class="form-control" name="lastName" onkeyup="alphabetOnly(this)" required=1>
                 </div>
                 <div class="col-sm-4">
                   <label for="idNumber">ID Number:</label>
-                  <input type="number" class="form-control" name="idNumber">
+                  <input type="number" class="form-control" name="idNumber" onkeyup="numbersOnly(this)" required=1>
                 </div>
                 <div class="col-sm-4">
                   <label for="email">Email address:</label>
@@ -83,7 +90,7 @@
                 </div>
                 <div class="col-sm-4">
                   <label for="age">Age:</label>
-                  <input type="number" class="form-control" name="age"> 
+                  <input type="number" class="form-control" name="age" onkeyup="numbersOnly(this)" required=1> 
                 </div>
     
                 <div class="col-sm-4">
@@ -93,12 +100,12 @@
     
                 <div class="col-sm-4">
                   <label for="city">City:</label>
-                  <input type="text" class="form-control" name="city"> 
+                  <input type="text" class="form-control" name="city" onkeyup="alphabetOnly(this)" required=1> 
                 </div>
     
                 <div class="col-sm-4">
                   <label for="province">Province:</label>
-                  <input type="text" class="form-control" name="province"> 
+                  <input type="text" class="form-control" name="province" onkeyup="alphabetOnly(this)" required=1> 
                 </div>
               </div>
               <br>
@@ -106,21 +113,21 @@
                 <h4>Emergency Contact</h4>
                 <div class="col-sm-4">
                   <label for="emergency_relation">Relationship:</label>
-                  <input type="text" class="form-control" name="emergency_relation">
+                  <input type="text" class="form-control" name="emergency_relation" onkeyup="alphabetOnly(this)" required=1>
                 </div>
                 <div class="col-sm-4">
                   <label for="emergency_firstName">First Name:</label>
-                  <input type="text" class="form-control" name="emergency_firstName">
+                  <input type="text" class="form-control" name="emergency_firstName" onkeyup="alphabetOnly(this)" required=1>
                 </div>
                 
                 <div class="col-sm-4">
                   <label for="emergency_lastName">Last Name:</label>
-                  <input type="text" class="form-control" name="emergency_lastName">
+                  <input type="text" class="form-control" name="emergency_lastName" onkeyup="alphabetOnly(this)" required=1>
                 </div>
     
                 <div class="col-sm-4">
                   <label for="emergency_phone">Phone Number:</label>
-                  <input type="number" class="form-control" name="emergency_phone">
+                  <input type="number" class="form-control" name="emergency_phone" onkeyup="numbersOnly(this)" required=1>
                 </div>
               </div>
               <br>
@@ -193,7 +200,7 @@
               <div class="row">
                 <div class="col-sm-1">
                   <label for="initials_para_1">Initials:</label>
-                  <input type="text" class="form-control" name="initials_para1">
+                  <input type="text" class="form-control" name="initials_para1" onkeyup="alphabetOnly(this);" required=1>
                 </div>
               </div>
 
@@ -246,7 +253,7 @@
               <div class="row">
                 <div class="col-sm-1">
                   <label for="initials_para_2">Initials:</label>
-                  <input type="text" class="form-control" name="initials_para2">
+                  <input type="text" class="form-control" name="initials_para2" onkeyup="alphabetOnly(this)" required=1>
                 </div>
               </div>
 

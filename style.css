@@ -6,6 +6,7 @@
     scroll-behavior: smooth;  
   }
 
+  /*----------------------------------Body Background------------------------------------------------------*/
   body {
       background-image: url(images/background_colour.png), url(images/augustana_background.jpg);
       background-repeat: no-repeat, no-repeat;
@@ -359,6 +360,10 @@ th {
 .liability_subheader {
     color: red;
 }
+
+.form-control {
+    min-width: 50px;
+  }
 /*--------------------------End of Waiver page------------------------------------*/
 
 input[type=number]::-webkit-inner-spin-button, 

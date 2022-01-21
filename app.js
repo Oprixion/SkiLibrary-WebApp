@@ -7,7 +7,7 @@ function calculatorButtonClicked(){
 }
 function HowToUse__popup() {
     var popup = document.getElementById("popup__container");
-    popup.style.visibility="initial"
+    popup.style.visibility="initial";
 }
 function toSlide2(){
     document.getElementById("slide2").scrollIntoView({behavior: "auto", block: "center"});
@@ -129,6 +129,9 @@ function clearStyle(questionNo){
 }
 //------------------------------------------End of Quiz Page------------------------------------------------//
 
-function finalCheck(){
-    if (alert("Please ensure all information is correct"));
+// Nonfunctional for now but possibly the general idea?
+function saveSignature(){
+    var canvas = document.getElementById("mycanvas");
+    var img    = canvas.toDataURL("image/png");
+    document.write('<img src="'+img+'"/>');
 }

@@ -1,5 +1,6 @@
 <?php
 require "config.php";
+
 if (isset($_POST['submit'])) {
 
   $sendMail = true;
@@ -7,6 +8,19 @@ if (isset($_POST['submit'])) {
   $firstName   = $_POST['firstName'];
   $lastName    = $_POST['lastName'];
   $idNumber    = $_POST['idNumber'];
+
+  // $sql = "SELECT fName, lName, idNumber
+  //         FROM  PERSONNEL
+  //         WHERE fName = $firstName
+  //             AND lName = $lastName
+  //             AND idNumber = $idNumber";
+
+  // $result = mysqli_query($connection, $sql);
+
+  // if (!$sql){
+  //   header("Location: waiver.php?status=invalid");
+  // }
+
   $age         = $_POST['age'];
   $email       = $_POST['email'];
   $address     = $_POST['address'];
@@ -42,7 +56,6 @@ try{
     )";
 
   $result = mysqli_query($connection, $sql);
-  echo($result);
   } catch (Exception $e) {
     $log = fopen('error.txt', 'w');
     fwrite($log, $e);
@@ -69,11 +82,11 @@ try{
 
 
  require "editor.php";
- $script_args = "python mail.py" . " " . $filename;
+//  $script_args = "python mail.py" . " " . $filename;
 
-if ($sendMail){
-  echo shell_exec($script_args);
-}
+// if ($sendMail){
+//   echo shell_exec($script_args);
+// }
 
  ?>
   <html>
@@ -86,7 +99,7 @@ if ($sendMail){
   
 
 } else {
-  echo("Something has gone wrong :(");
+  header("Location: waiver.php");
 }
 
 ?>

@@ -1,6 +1,24 @@
 <?php
 /**
+ * This file requires config.php and may require editor.php on valid submissions
+ * (see below).
  * 
+ * 
+ * This file examines form data submitted to it and determines whether the data is
+ * valid. Data is considered valid if and only if:
+ *  - Form field entries for firstName, lastName, and idNumber have matching 
+ *    entries in the PERSONNEL table.
+ *  - The length of any entry does not exceed its maximum as prescribed by the
+ *    table contraints.
+ *  - A duplicate entry (idNumber primary key) does not already exist in the PATRON
+ *    table.
+ * 
+ * Failing any one of the above conditions, the user is returned to the waiver page
+ * with a corresponding status and error alert.
+ * If a valid submission is posted, the submission is entered into table PATRON and
+ * the user is passed onto the certificate page.
+ * 
+ * Links to waiver.php and certificate.php.
  * 
  */
 
@@ -22,6 +40,7 @@ if (isset($_POST['submit'])) {
               AND idNumber = $idNumber";
 
   $result = mysqli_query($connection, $sql);
+
   try{
     if (empty($result)){
       throw new Exception ("Identity mismatch: unable to verify identity");

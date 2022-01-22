@@ -1,5 +1,13 @@
 <?php 
-
+/**
+ * This file requires config.php
+ * 
+ * This file enables a user to input fName, lName, and idNumber fields to determine whether
+ * a corresponding record exists in the PATRON table. If the table contains no such record,
+ * the user is informed.
+ * 
+ * 
+ */
 require "config.php";
 
 $noSuchRecord='';

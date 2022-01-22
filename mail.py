@@ -1,3 +1,10 @@
+"""
+This file uses the simplegmail client API, modified and used under MIT license, Copyright (c) 2018 Jeremy Ephron Barenholtz
+
+Emails an attachment corresponding to the first parameter passed when executing
+this script via command line
+"""
+
 from simplegmail import Gmail
 import sys
 
@@ -8,8 +15,8 @@ gmail = Gmail() # will open a browser window to ask you to log in and authentica
 params = {
   "to": "jacob.le.baxter@gmail.com",  # must be authorized 
   "sender": "jacob.le.baxter@gmail.com",
-  "subject": "Are you paying to much for you car insurance?",
-  "msg_plain": "I am a literal god.",
+  "subject": "Waiver; New Patron",
+  "msg_plain": attachment + " received",
   "attachments":  [attachment]
   
 }

@@ -1,30 +1,31 @@
 <?php 
 /**
+ * This file displays a cerficate if the URL parameter corresponds to an existing
+ * record in the PATRON table.
  * 
- * 
- * 
+ * Links to index.html
  * 
  */
 
- 
-  require "config.php";
 
-  if (isset($_GET['patron'])){
-    $id = $_GET['patron'];
+require "config.php";
 
-    $statement = "SELECT fName, lName
-                  FROM PATRON
-                  WHERE $id = idNumber";
-    
-    $query = mysqli_query($connection, $statement);
-    $result = mysqli_fetch_array($query);
-    if (empty($result)){
-      echo("Result is empty!!!!!");
-    }
-    $firstName = $result[0];
-    $lastName = $result[1];
-  }
-  ?>
+if (isset($_GET['patron'])){
+$id = $_GET['patron'];
+
+$statement = "SELECT fName, lName
+              FROM PATRON
+              WHERE $id = idNumber";
+
+$query = mysqli_query($connection, $statement);
+$result = mysqli_fetch_array($query);
+if (empty($result)){
+  echo("Result is empty!!!!!");
+}
+$firstName = $result[0];
+$lastName = $result[1];
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">

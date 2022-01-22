@@ -1,3 +1,10 @@
+<?php
+/**
+ * This file uses handwriting.js, modified and used under MIT license, Copyright (c) 2015 Elton
+ */
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,9 +72,12 @@
               ?> alert("Invalid entry. Our records indicate a certification exists for the ID you have entered.");
               <?php
             } elseif ($_GET['status'] == 'failed'){
-              ?> alert("Invalid entry. Please ensure that all fields have been filled in correctly.");
+              ?> alert("Invalid entry, please try again. Ensure that all fields are filled in correctly.");
               <?php
-            } ?>
+            } elseif ($_GET['status'] == 'invalid') {
+              ?> alert("Invalid entry, please try again. Ensure that your name(s) and ID are valid.");
+              <?php
+            }?>
             </script>
             <?php
           }

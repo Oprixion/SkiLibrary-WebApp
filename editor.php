@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * Must be included in addRecord.php
+ * 
+ * This file reads waiver_master.xml and replaces fields within that document
+ * with variables (assumed to be strings), according to the respective
+ * placeholder of each.
+ * waiver_master.xml is then emailed by a Python script executed in the shell.
+ * 
+ * NOTE: the remote server host disallows .py shell scripts.
+ */
+
 $content = file_get_contents('waiver_master.xml');
 
 $new  = str_replace('firstName_p', $firstName, $content);
